@@ -1,7 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import { Itinerary } from '@/types';
 import NaverMapView from './NaverMapView';
+import CongestionLegend from './CongestionLegend';
 
 interface ItineraryDisplayProps {
   itinerary: Itinerary;
@@ -12,67 +14,117 @@ export default function ItineraryDisplay({
   itinerary,
   onGenerateNew,
 }: ItineraryDisplayProps) {
+  const [showCongestion, setShowCongestion] = useState(true);
+
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">
-            생성된 안심 코스
-          </h2>
-          <button
-            onClick={onGenerateNew}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-          >
-            새로운 코스 생성
-          </button>
+      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-gray-100">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl">
+              <span className="text-3xl">✅</span>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800">
+                생성된 안심 코스
+              </h2>
+              <p className="text-sm text-gray-600 mt-1">
+                AI가 맞춤형으로 제안한 여행 경로입니다
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <button
+              onClick={() => setShowCongestion(!showCongestion)}
+              className={`px-5 py-3 rounded-xl font-medium transition-all duration-300 ${
+                showCongestion
+                  ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg'
+                  : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                {showCongestion ? '😊' : '😐'} 혼잡도 {showCongestion ? '켜짐' : '끄기'}
+              </span>
+            </button>
+            <button
+              onClick={onGenerateNew}
+              className="px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl font-medium transition-all duration-300 shadow-lg"
+            >
+              🔄 새로운 코스 생성
+            </button>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-gray-800 mb-2">
-                여행 정보
-              </h3>
-              <div className="space-y-1 text-sm text-gray-700">
-                <p>
-                  <strong>날짜:</strong> {itinerary.date}
-                </p>
-                <p>
-                  <strong>소요 시간:</strong> {itinerary.duration}시간
-                </p>
-                <p>
-                  <strong>출발지:</strong> {itinerary.startLocation}
-                </p>
-                <p>
-                  <strong>경유지:</strong> {itinerary.stops.length}곳
-                </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-xl">📋</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">
+                  여행 정보
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/70 p-3 rounded-xl">
+                  <p className="text-xs text-gray-600 mb-1">날짜</p>
+                  <p className="font-semibold text-gray-800">{itinerary.date}</p>
+                </div>
+                <div className="bg-white/70 p-3 rounded-xl">
+                  <p className="text-xs text-gray-600 mb-1">소요 시간</p>
+                  <p className="font-semibold text-gray-800">{itinerary.duration}시간</p>
+                </div>
+                <div className="bg-white/70 p-3 rounded-xl">
+                  <p className="text-xs text-gray-600 mb-1">출발지</p>
+                  <p className="font-semibold text-gray-800">{itinerary.startLocation}</p>
+                </div>
+                <div className="bg-white/70 p-3 rounded-xl">
+                  <p className="text-xs text-gray-600 mb-1">경유지</p>
+                  <p className="font-semibold text-gray-800">{itinerary.stops.length}곳</p>
+                </div>
               </div>
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-800 mb-4">
-                코스 일정
-              </h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-xl">📍</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">
+                  코스 일정
+                </h3>
+              </div>
               <div className="space-y-4">
                 {itinerary.stops.map((stop, index) => (
                   <div
                     key={index}
-                    className="border border-gray-200 rounded-lg p-4 hover:border-blue-400 transition-colors"
+                    className="bg-white border-2 border-gray-200 rounded-2xl p-5 hover:border-blue-400 hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                        {index + 1}
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
+                          {index + 1}
+                        </div>
                       </div>
                       <div className="flex-grow">
-                        <h4 className="font-semibold text-gray-800 mb-1">
+                        <h4 className="text-lg font-bold text-gray-800 mb-2">
                           {stop.name}
                         </h4>
-                        <p className="text-sm text-blue-600 mb-2">
-                          {stop.time}
-                        </p>
-                        <p className="text-sm text-gray-600 bg-green-50 p-2 rounded border-l-4 border-green-500">
-                          💡 {stop.reason}
-                        </p>
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="text-lg">⏰</span>
+                          <p className="text-sm font-medium text-blue-600">
+                            {stop.time}
+                          </p>
+                        </div>
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-xl border-l-4 border-green-500">
+                          <div className="flex items-start gap-2">
+                            <span className="text-xl flex-shrink-0">💡</span>
+                            <p className="text-sm text-gray-700 leading-relaxed">
+                              {stop.reason}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -82,10 +134,12 @@ export default function ItineraryDisplay({
           </div>
 
           <div className="lg:sticky lg:top-4 h-fit">
-            <NaverMapView stops={itinerary.stops} />
+            <NaverMapView stops={itinerary.stops} showCongestion={showCongestion} />
           </div>
         </div>
       </div>
+
+      {showCongestion && <CongestionLegend />}
     </div>
   );
 }

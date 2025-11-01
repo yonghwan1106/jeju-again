@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 import { ItineraryStop } from '@/types';
+import CongestionOverlay from './CongestionOverlay';
 
 interface NaverMapViewProps {
   stops: ItineraryStop[];
+  showCongestion?: boolean;
 }
 
 declare global {
@@ -13,7 +15,7 @@ declare global {
   }
 }
 
-export default function NaverMapView({ stops }: NaverMapViewProps) {
+export default function NaverMapView({ stops, showCongestion = false }: NaverMapViewProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
 
@@ -146,7 +148,7 @@ export default function NaverMapView({ stops }: NaverMapViewProps) {
       <div
         ref={mapRef}
         style={{ width: '100%', height: '500px' }}
-        className="bg-gray-100"
+        className="bg-gray-100 relative"
       >
         {!process.env.NEXT_PUBLIC_NAVER_CLIENT_ID && (
           <div className="flex items-center justify-center h-full text-gray-500">
@@ -155,6 +157,9 @@ export default function NaverMapView({ stops }: NaverMapViewProps) {
               <p>Naver Maps API 키를 설정해주세요.</p>
             </div>
           </div>
+        )}
+        {showCongestion && mapInstanceRef.current && (
+          <CongestionOverlay map={mapInstanceRef.current} />
         )}
       </div>
     </div>
