@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const baseUrl = 'https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving';
-    let url = `${baseUrl}?start=${start}&goal=${goal}`;
+    let url = `${baseUrl}?start=${start}&goal=${goal}&option=traoptimal`;
 
     if (waypoints) {
       url += `&waypoints=${waypoints}`;
@@ -30,9 +30,18 @@ export async function GET(request: NextRequest) {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('Directions API error:', errorText);
+      console.error('Directions API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        error: errorText,
+        url,
+        headers: {
+          'x-ncp-apigw-api-key-id': process.env.NEXT_PUBLIC_NAVER_CLIENT_ID ? 'set' : 'missing',
+          'x-ncp-apigw-api-key': process.env.NAVER_CLIENT_SECRET ? 'set' : 'missing',
+        }
+      });
       return NextResponse.json(
-        { error: 'Failed to fetch directions' },
+        { error: 'Failed to fetch directions', details: errorText },
         { status: response.status }
       );
     }
