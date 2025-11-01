@@ -278,5 +278,285 @@
       "wheelchair": true,
       "parking": true
     }
+  },
+  {
+    "id": "POI021",
+    "name": "만장굴",
+    "category": "CAVE",
+    "region": "Gujwa",
+    "lat": 33.5266,
+    "lon": 126.7712,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI022",
+    "name": "송악산",
+    "category": "MOUNTAIN",
+    "region": "Daejeong",
+    "lat": 33.2234,
+    "lon": 126.2932,
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI023",
+    "name": "정방폭포",
+    "category": "WATERFALL",
+    "region": "Seogwipo-si",
+    "lat": 33.2445,
+    "lon": 126.5738,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI024",
+    "name": "월정리해변",
+    "category": "BEACH",
+    "region": "Gujwa",
+    "lat": 33.5563,
+    "lon": 126.7957,
+    "profile_target": ["GENERAL", "TODDLER_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI025",
+    "name": "제주민속촌",
+    "category": "CULTURE",
+    "region": "Pyoseon",
+    "lat": 33.3183,
+    "lon": 126.7990,
+    "profile_target": ["GENERAL", "TODDLER_FAMILY", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI026",
+    "name": "산굼부리",
+    "category": "CRATER",
+    "region": "Jocheon",
+    "lat": 33.4340,
+    "lon": 126.7720,
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI027",
+    "name": "오설록티뮤지엄",
+    "category": "MUSEUM",
+    "region": "Andeok",
+    "lat": 33.3061,
+    "lon": 126.2896,
+    "profile_target": ["GENERAL", "CARE_SENIOR", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI028",
+    "name": "섭지코지",
+    "category": "SCENIC",
+    "region": "Seongsan",
+    "lat": 33.4242,
+    "lon": 126.9299,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI029",
+    "name": "한림공원",
+    "category": "GARDEN",
+    "region": "Hallim",
+    "lat": 33.3911,
+    "lon": 126.2405,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI030",
+    "name": "용두암",
+    "category": "SCENIC",
+    "region": "Jeju-si",
+    "lat": 33.5156,
+    "lon": 126.5123,
+    "profile_target": ["GENERAL", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI031",
+    "name": "신비의도로",
+    "category": "ATTRACTION",
+    "region": "Namwon",
+    "lat": 33.3183,
+    "lon": 126.5891,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI032",
+    "name": "중문색달해변",
+    "category": "BEACH",
+    "region": "Seogwipo-si",
+    "lat": 33.2541,
+    "lon": 126.4132,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI033",
+    "name": "제주아쿠아플라넷",
+    "category": "AQUARIUM",
+    "region": "Seogwipo-si",
+    "lat": 33.4299,
+    "lon": 126.3065,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI034",
+    "name": "제주돌문화공원",
+    "category": "PARK",
+    "region": "Jocheon",
+    "lat": 33.4482,
+    "lon": 126.7719,
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI035",
+    "name": "신창풍차해안도로",
+    "category": "SCENIC",
+    "region": "Hallim",
+    "lat": 33.3972,
+    "lon": 126.2392,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI036",
+    "name": "제주허브동산",
+    "category": "GARDEN",
+    "region": "Pyoseon",
+    "lat": 33.3192,
+    "lon": 126.8089,
+    "profile_target": ["CARE_SENIOR", "TODDLER_FAMILY", "INFANT_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI037",
+    "name": "산방산",
+    "category": "MOUNTAIN",
+    "region": "Andeok",
+    "lat": 33.2371,
+    "lon": 126.3131,
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI038",
+    "name": "이호테우해변",
+    "category": "BEACH",
+    "region": "Jeju-si",
+    "lat": 33.4972,
+    "lon": 126.4532,
+    "profile_target": ["GENERAL", "TODDLER_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI039",
+    "name": "제주목관아",
+    "category": "CULTURE",
+    "region": "Jeju-si",
+    "lat": 33.5126,
+    "lon": 126.5219,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI040",
+    "name": "천제연폭포",
+    "category": "WATERFALL",
+    "region": "Jungmun",
+    "lat": 33.2549,
+    "lon": 126.4198,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
   }
 ]
