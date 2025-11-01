@@ -23,8 +23,8 @@ export async function GET(request: NextRequest) {
 
     const response = await fetch(url, {
       headers: {
-        'X-NCP-APIGW-API-KEY-ID': process.env.NEXT_PUBLIC_NAVER_CLIENT_ID || '',
-        'X-NCP-APIGW-API-KEY': process.env.NAVER_CLIENT_SECRET || '',
+        'x-ncp-apigw-api-key-id': process.env.NEXT_PUBLIC_NAVER_CLIENT_ID || '',
+        'x-ncp-apigw-api-key': process.env.NAVER_CLIENT_SECRET || '',
       },
     });
 
