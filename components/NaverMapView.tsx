@@ -64,7 +64,7 @@ export default function NaverMapView({ stops, showCongestion = false }: NaverMap
     }
   };
 
-  const updateMap = () => {
+  const updateMap = async () => {
     if (!window.naver || !mapInstanceRef.current) return;
 
     const map = mapInstanceRef.current;
@@ -115,19 +115,73 @@ export default function NaverMapView({ stops, showCongestion = false }: NaverMap
       });
     });
 
-    // Draw polyline connecting the stops
+    // Draw road-based route using Directions API
     if (stops.length > 1) {
-      const path = stops.map(
-        (stop) => new window.naver.maps.LatLng(stop.lat, stop.lon)
-      );
+      try {
+        // Fetch route from each stop to the next
+        for (let i = 0; i < stops.length - 1; i++) {
+          const start = `${stops[i].lon},${stops[i].lat}`;
+          const goal = `${stops[i + 1].lon},${stops[i + 1].lat}`;
 
-      new window.naver.maps.Polyline({
-        map: map,
-        path: path,
-        strokeColor: '#2563eb',
-        strokeWeight: 4,
-        strokeOpacity: 0.7,
-      });
+          const response = await fetch(
+            `/api/directions?start=${start}&goal=${goal}`
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+
+            // Extract path coordinates from the response
+            if (data.route && data.route.traoptimal && data.route.traoptimal[0]) {
+              const route = data.route.traoptimal[0];
+              const path: any[] = [];
+
+              // Collect all path coordinates from all sections
+              route.path.forEach((coord: number[]) => {
+                path.push(new window.naver.maps.LatLng(coord[1], coord[0]));
+              });
+
+              // Draw polyline for this segment
+              new window.naver.maps.Polyline({
+                map: map,
+                path: path,
+                strokeColor: '#2563eb',
+                strokeWeight: 5,
+                strokeOpacity: 0.8,
+              });
+            }
+          } else {
+            // Fallback to straight line if API fails
+            console.warn('Directions API failed, using straight line');
+            const path = [
+              new window.naver.maps.LatLng(stops[i].lat, stops[i].lon),
+              new window.naver.maps.LatLng(stops[i + 1].lat, stops[i + 1].lon),
+            ];
+
+            new window.naver.maps.Polyline({
+              map: map,
+              path: path,
+              strokeColor: '#2563eb',
+              strokeWeight: 4,
+              strokeOpacity: 0.7,
+              strokeStyle: 'dash',
+            });
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching directions:', error);
+        // Fallback to straight lines
+        const path = stops.map(
+          (stop) => new window.naver.maps.LatLng(stop.lat, stop.lon)
+        );
+        new window.naver.maps.Polyline({
+          map: map,
+          path: path,
+          strokeColor: '#2563eb',
+          strokeWeight: 4,
+          strokeOpacity: 0.7,
+          strokeStyle: 'dash',
+        });
+      }
     }
 
     // Fit bounds to show all markers
