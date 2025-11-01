@@ -7,6 +7,7 @@ import CongestionOverlay from './CongestionOverlay';
 interface NaverMapViewProps {
   stops: ItineraryStop[];
   showCongestion?: boolean;
+  startLocation?: string;
 }
 
 declare global {
@@ -15,7 +16,7 @@ declare global {
   }
 }
 
-export default function NaverMapView({ stops, showCongestion = false }: NaverMapViewProps) {
+export default function NaverMapView({ stops, showCongestion = false, startLocation }: NaverMapViewProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
 
@@ -72,6 +73,48 @@ export default function NaverMapView({ stops, showCongestion = false }: NaverMap
     // Clear existing markers and polylines
     // (In production, you'd want to keep track of these in refs and clear them properly)
 
+    // Add start location marker (airport)
+    const startCoords = { lat: 33.5068, lon: 126.4892 }; // 제주국제공항
+    const airportMarker = new window.naver.maps.Marker({
+      position: new window.naver.maps.LatLng(startCoords.lat, startCoords.lon),
+      map: map,
+      title: startLocation || '제주국제공항',
+      icon: {
+        content: `<div style="
+          width: 36px;
+          height: 36px;
+          background-color: #10b981;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 18px;
+          border: 3px solid white;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        ">🛫</div>`,
+        anchor: new window.naver.maps.Point(18, 18),
+      },
+    });
+
+    const airportInfoWindow = new window.naver.maps.InfoWindow({
+      content: `
+        <div style="padding: 10px; min-width: 150px;">
+          <h4 style="margin: 0 0 5px 0; font-weight: bold;">${startLocation || '제주국제공항'}</h4>
+          <p style="margin: 0; font-size: 12px; color: #666;">출발지</p>
+        </div>
+      `,
+    });
+
+    window.naver.maps.Event.addListener(airportMarker, 'click', () => {
+      if (airportInfoWindow.getMap()) {
+        airportInfoWindow.close();
+      } else {
+        airportInfoWindow.open(map, airportMarker);
+      }
+    });
+
     // Add markers for each stop
     stops.forEach((stop, index) => {
       const marker = new window.naver.maps.Marker({
@@ -116,8 +159,42 @@ export default function NaverMapView({ stops, showCongestion = false }: NaverMap
     });
 
     // Draw road-based route using Directions API
-    if (stops.length > 1) {
+    if (stops.length > 0) {
       try {
+        // Get start location coordinates (default to Jeju Airport)
+        const startCoords = { lat: 33.5068, lon: 126.4892 }; // 제주국제공항
+
+        // Draw route from start location to first stop
+        if (stops.length > 0) {
+          const start = `${startCoords.lon},${startCoords.lat}`;
+          const goal = `${stops[0].lon},${stops[0].lat}`;
+
+          const response = await fetch(
+            `/api/directions?start=${start}&goal=${goal}`
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+
+            if (data.route && data.route.traoptimal && data.route.traoptimal[0]) {
+              const route = data.route.traoptimal[0];
+              const path: any[] = [];
+
+              route.path.forEach((coord: number[]) => {
+                path.push(new window.naver.maps.LatLng(coord[1], coord[0]));
+              });
+
+              new window.naver.maps.Polyline({
+                map: map,
+                path: path,
+                strokeColor: '#10b981', // Green color for start route
+                strokeWeight: 5,
+                strokeOpacity: 0.8,
+              });
+            }
+          }
+        }
+
         // Fetch route from each stop to the next
         for (let i = 0; i < stops.length - 1; i++) {
           const start = `${stops[i].lon},${stops[i].lat}`;
@@ -184,9 +261,12 @@ export default function NaverMapView({ stops, showCongestion = false }: NaverMap
       }
     }
 
-    // Fit bounds to show all markers
+    // Fit bounds to show all markers including start location
     if (stops.length > 0) {
       const bounds = new window.naver.maps.LatLngBounds();
+      // Include start location (airport)
+      bounds.extend(new window.naver.maps.LatLng(startCoords.lat, startCoords.lon));
+      // Include all stops
       stops.forEach((stop) => {
         bounds.extend(new window.naver.maps.LatLng(stop.lat, stop.lon));
       });

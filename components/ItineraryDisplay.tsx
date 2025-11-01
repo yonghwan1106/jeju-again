@@ -194,7 +194,7 @@ export default function ItineraryDisplay({
           </div>
 
           <div className="lg:sticky lg:top-4 h-fit">
-            <NaverMapView stops={itinerary.stops} showCongestion={showCongestion} />
+            <NaverMapView stops={itinerary.stops} showCongestion={showCongestion} startLocation={itinerary.startLocation} />
           </div>
         </div>
       </div>
