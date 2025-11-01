@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const baseUrl = 'https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving';
+    const baseUrl = 'https://maps.apigw.ntruss.com/map-direction/v1/driving';
     let url = `${baseUrl}?start=${start}&goal=${goal}&option=traoptimal`;
 
     if (waypoints) {
