@@ -281,7 +281,7 @@ export default function NaverMapView({ stops, showCongestion = false, startLocat
       </div>
       <div
         ref={mapRef}
-        style={{ width: '100%', height: '500px' }}
+        style={{ width: '100%', height: '700px' }}
         className="bg-gray-100 relative"
       >
         {!process.env.NEXT_PUBLIC_NAVER_CLIENT_ID && (
