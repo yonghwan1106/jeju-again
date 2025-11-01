@@ -115,86 +115,87 @@ export default function ItineraryDisplay({
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-xl">📋</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  여행 정보
-                </h3>
+        <div className="space-y-8">
+          {/* 여행 정보 - 가로로 넓게 */}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-100">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-xl">📋</span>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/70 p-3 rounded-xl">
-                  <p className="text-xs text-gray-600 mb-1">날짜</p>
-                  <p className="font-semibold text-gray-800">{itinerary.date}</p>
-                </div>
-                <div className="bg-white/70 p-3 rounded-xl">
-                  <p className="text-xs text-gray-600 mb-1">소요 시간</p>
-                  <p className="font-semibold text-gray-800">{itinerary.duration}시간</p>
-                </div>
-                <div className="bg-white/70 p-3 rounded-xl">
-                  <p className="text-xs text-gray-600 mb-1">출발지</p>
-                  <p className="font-semibold text-gray-800">{itinerary.startLocation}</p>
-                </div>
-                <div className="bg-white/70 p-3 rounded-xl">
-                  <p className="text-xs text-gray-600 mb-1">경유지</p>
-                  <p className="font-semibold text-gray-800">{itinerary.stops.length}곳</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-800">
+                여행 정보
+              </h3>
             </div>
-
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-xl">📍</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">
-                  코스 일정
-                </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white/70 p-3 rounded-xl">
+                <p className="text-xs text-gray-600 mb-1">날짜</p>
+                <p className="font-semibold text-gray-800">{itinerary.date}</p>
               </div>
-              <div className="space-y-4">
-                {itinerary.stops.map((stop, index) => (
-                  <div
-                    key={index}
-                    className="bg-white border-2 border-gray-200 rounded-2xl p-5 hover:border-blue-400 hover:shadow-lg transition-all duration-300 group"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
-                          {index + 1}
-                        </div>
-                      </div>
-                      <div className="flex-grow">
-                        <h4 className="text-lg font-bold text-gray-800 mb-2">
-                          {stop.name}
-                        </h4>
-                        <div className="flex items-center gap-2 mb-3">
-                          <span className="text-lg">⏰</span>
-                          <p className="text-sm font-medium text-blue-600">
-                            {stop.time}
-                          </p>
-                        </div>
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-xl border-l-4 border-green-500">
-                          <div className="flex items-start gap-2">
-                            <span className="text-xl flex-shrink-0">💡</span>
-                            <p className="text-sm text-gray-700 leading-relaxed">
-                              {stop.reason}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="bg-white/70 p-3 rounded-xl">
+                <p className="text-xs text-gray-600 mb-1">소요 시간</p>
+                <p className="font-semibold text-gray-800">{itinerary.duration}시간</p>
+              </div>
+              <div className="bg-white/70 p-3 rounded-xl">
+                <p className="text-xs text-gray-600 mb-1">출발지</p>
+                <p className="font-semibold text-gray-800">{itinerary.startLocation}</p>
+              </div>
+              <div className="bg-white/70 p-3 rounded-xl">
+                <p className="text-xs text-gray-600 mb-1">경유지</p>
+                <p className="font-semibold text-gray-800">{itinerary.stops.length}곳</p>
               </div>
             </div>
           </div>
 
-          <div className="lg:sticky lg:top-4 h-fit">
+          {/* 코스 지도 - 전체 너비 */}
+          <div>
             <NaverMapView stops={itinerary.stops} showCongestion={showCongestion} startLocation={itinerary.startLocation} />
+          </div>
+
+          {/* 코스 일정 */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                <span className="text-xl">📍</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800">
+                코스 일정
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {itinerary.stops.map((stop, index) => (
+                <div
+                  key={index}
+                  className="bg-white border-2 border-gray-200 rounded-2xl p-5 hover:border-blue-400 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
+                        {index + 1}
+                      </div>
+                    </div>
+                    <div className="flex-grow">
+                      <h4 className="text-lg font-bold text-gray-800 mb-2">
+                        {stop.name}
+                      </h4>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-lg">⏰</span>
+                        <p className="text-sm font-medium text-blue-600">
+                          {stop.time}
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-xl border-l-4 border-green-500">
+                        <div className="flex items-start gap-2">
+                          <span className="text-xl flex-shrink-0">💡</span>
+                          <p className="text-sm text-gray-700 leading-relaxed">
+                            {stop.reason}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
