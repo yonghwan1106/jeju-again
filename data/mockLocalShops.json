@@ -1,0 +1,152 @@
+[
+  {
+    "id": "SHOP001",
+    "name": "한림 감귤농장 카페",
+    "type": "CAFE",
+    "region": "Hallim",
+    "lat": 33.4123,
+    "lon": 126.2654,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR", "TODDLER_FAMILY"],
+    "features": ["nursing_room", "parking", "kids_menu"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP002",
+    "name": "구좌 흑돼지 맛집",
+    "type": "RESTAURANT",
+    "region": "Gujwa",
+    "lat": 33.5234,
+    "lon": 126.8123,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "features": ["parking", "local_food"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP003",
+    "name": "표선 감귤체험농장",
+    "type": "EXPERIENCE",
+    "region": "Pyoseon",
+    "lat": 33.3654,
+    "lon": 126.8234,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY"],
+    "features": ["kids_activity", "parking", "photo_spot"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP004",
+    "name": "애월 해안카페 '바다정원'",
+    "type": "CAFE",
+    "region": "Aewol",
+    "lat": 33.4523,
+    "lon": 126.3145,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR", "GENERAL"],
+    "features": ["ocean_view", "parking", "quiet"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP005",
+    "name": "조천 전통떡집",
+    "type": "RESTAURANT",
+    "region": "Jocheon",
+    "lat": 33.5123,
+    "lon": 126.6543,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR"],
+    "features": ["local_food", "parking", "traditional"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP006",
+    "name": "안덕면 목장체험",
+    "type": "EXPERIENCE",
+    "region": "Andeok",
+    "lat": 33.2945,
+    "lon": 126.3234,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY"],
+    "features": ["animal_experience", "parking", "kids_activity"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP007",
+    "name": "성산 해녀의집",
+    "type": "RESTAURANT",
+    "region": "Seongsan",
+    "lat": 33.4634,
+    "lon": 126.9123,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "features": ["local_food", "seafood", "parking"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP008",
+    "name": "남원 곶자왈 카페",
+    "type": "CAFE",
+    "region": "Namwon",
+    "lat": 33.3234,
+    "lon": 126.7123,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR", "INFANT_FAMILY"],
+    "features": ["forest_view", "quiet", "parking", "nursing_room"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP009",
+    "name": "한경면 전통시장",
+    "type": "MARKET",
+    "region": "Hangyeong",
+    "lat": 33.3456,
+    "lon": 126.1987,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "features": ["local_market", "parking", "traditional"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "SHOP010",
+    "name": "구좌 아이랜드키즈카페",
+    "type": "CAFE",
+    "region": "Gujwa",
+    "lat": 33.5456,
+    "lon": 126.7987,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY"],
+    "features": ["kids_cafe", "nursing_room", "parking", "kids_menu"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  }
+]

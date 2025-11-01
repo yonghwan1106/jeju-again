@@ -1,0 +1,282 @@
+[
+  {
+    "id": "POI001",
+    "name": "한라산 1100고지",
+    "category": "MOUNTAIN",
+    "region": "Jeju-si",
+    "lat": 33.3846,
+    "lon": 126.4983,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI002",
+    "name": "성산일출봉",
+    "category": "SCENIC",
+    "region": "Seongsan",
+    "lat": 33.4586,
+    "lon": 126.9424,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI003",
+    "name": "사려니숲길",
+    "category": "FOREST",
+    "region": "Jocheon",
+    "lat": 33.4290,
+    "lon": 126.6817,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR", "TODDLER_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI004",
+    "name": "보롬왓",
+    "category": "EXPERIENCE",
+    "region": "Pyoseon",
+    "lat": 33.4150,
+    "lon": 126.7580,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI005",
+    "name": "김녕미로공원",
+    "category": "EXPERIENCE",
+    "region": "Gujwa",
+    "lat": 33.5569,
+    "lon": 126.7571,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI006",
+    "name": "절물자연휴양림",
+    "category": "FOREST",
+    "region": "Jocheon",
+    "lat": 33.4764,
+    "lon": 126.6420,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI007",
+    "name": "애월해안도로",
+    "category": "SCENIC",
+    "region": "Aewol",
+    "lat": 33.4636,
+    "lon": 126.3192,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI008",
+    "name": "곶자왈도립공원",
+    "category": "FOREST",
+    "region": "Aewol",
+    "lat": 33.4123,
+    "lon": 126.3542,
+    "profile_target": ["ACTIVE_SENIOR", "TODDLER_FAMILY"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI009",
+    "name": "표선해변",
+    "category": "BEACH",
+    "region": "Pyoseon",
+    "lat": 33.3263,
+    "lon": 126.8375,
+    "profile_target": ["TODDLER_FAMILY", "INFANT_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI010",
+    "name": "안덕계곡",
+    "category": "VALLEY",
+    "region": "Andeok",
+    "lat": 33.2823,
+    "lon": 126.3114,
+    "profile_target": ["ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI011",
+    "name": "동문시장",
+    "category": "MARKET",
+    "region": "Jeju-si",
+    "lat": 33.5143,
+    "lon": 126.5389,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI012",
+    "name": "함덕해수욕장",
+    "category": "BEACH",
+    "region": "Jocheon",
+    "lat": 33.5432,
+    "lon": 126.6686,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI013",
+    "name": "협재해수욕장",
+    "category": "BEACH",
+    "region": "Hallim",
+    "lat": 33.3941,
+    "lon": 126.2398,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI014",
+    "name": "우도",
+    "category": "ISLAND",
+    "region": "Udo",
+    "lat": 33.5003,
+    "lon": 126.9535,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": false
+    }
+  },
+  {
+    "id": "POI015",
+    "name": "비자림",
+    "category": "FOREST",
+    "region": "Gujwa",
+    "lat": 33.4885,
+    "lon": 126.8089,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI016",
+    "name": "서귀포 매일올레시장",
+    "category": "MARKET",
+    "region": "Seogwipo-si",
+    "lat": 33.2529,
+    "lon": 126.5625,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI017",
+    "name": "천지연폭포",
+    "category": "WATERFALL",
+    "region": "Seogwipo-si",
+    "lat": 33.2470,
+    "lon": 126.5568,
+    "profile_target": ["GENERAL", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI018",
+    "name": "주상절리대",
+    "category": "SCENIC",
+    "region": "Seogwipo-si",
+    "lat": 33.2372,
+    "lon": 126.4232,
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI019",
+    "name": "성읍민속마을",
+    "category": "CULTURE",
+    "region": "Pyoseon",
+    "lat": 33.3937,
+    "lon": 126.7934,
+    "profile_target": ["ACTIVE_SENIOR", "CARE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true
+    }
+  },
+  {
+    "id": "POI020",
+    "name": "카멜리아힐",
+    "category": "GARDEN",
+    "region": "Andeok",
+    "lat": 33.2895,
+    "lon": 126.3512,
+    "profile_target": ["CARE_SENIOR", "ACTIVE_SENIOR", "INFANT_FAMILY"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true
+    }
+  }
+]

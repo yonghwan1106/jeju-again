@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-11-01T14:30:00Z",
+  "levels": [
+    {
+      "poiId": "POI002",
+      "name": "성산일출봉",
+      "status": "CROWDED",
+      "visitorCount": 2500,
+      "lat": 33.4586,
+      "lon": 126.9424
+    },
+    {
+      "poiId": "POI011",
+      "name": "동문시장",
+      "status": "CROWDED",
+      "visitorCount": 3200,
+      "lat": 33.5143,
+      "lon": 126.5389
+    },
+    {
+      "poiId": "POI012",
+      "name": "함덕해수욕장",
+      "status": "NORMAL",
+      "visitorCount": 800,
+      "lat": 33.5432,
+      "lon": 126.6686
+    },
+    {
+      "poiId": "POI013",
+      "name": "협재해수욕장",
+      "status": "NORMAL",
+      "visitorCount": 950,
+      "lat": 33.3941,
+      "lon": 126.2398
+    },
+    {
+      "poiId": "POI016",
+      "name": "서귀포 매일올레시장",
+      "status": "CROWDED",
+      "visitorCount": 2800,
+      "lat": 33.2529,
+      "lon": 126.5625
+    },
+    {
+      "poiId": "POI017",
+      "name": "천지연폭포",
+      "status": "NORMAL",
+      "visitorCount": 1200,
+      "lat": 33.2470,
+      "lon": 126.5568
+    },
+    {
+      "poiId": "POI018",
+      "name": "주상절리대",
+      "status": "CROWDED",
+      "visitorCount": 2100,
+      "lat": 33.2372,
+      "lon": 126.4232
+    },
+    {
+      "poiId": "POI003",
+      "name": "사려니숲길",
+      "status": "QUIET",
+      "visitorCount": 150,
+      "lat": 33.4290,
+      "lon": 126.6817
+    },
+    {
+      "poiId": "POI004",
+      "name": "보롬왓",
+      "status": "QUIET",
+      "visitorCount": 80,
+      "lat": 33.4150,
+      "lon": 126.7580
+    },
+    {
+      "poiId": "POI006",
+      "name": "절물자연휴양림",
+      "status": "QUIET",
+      "visitorCount": 120,
+      "lat": 33.4764,
+      "lon": 126.6420
+    },
+    {
+      "poiId": "POI015",
+      "name": "비자림",
+      "status": "QUIET",
+      "visitorCount": 200,
+      "lat": 33.4885,
+      "lon": 126.8089
+    },
+    {
+      "poiId": "POI020",
+      "name": "카멜리아힐",
+      "status": "QUIET",
+      "visitorCount": 90,
+      "lat": 33.2895,
+      "lon": 126.3512
+    }
+  ]
+}
