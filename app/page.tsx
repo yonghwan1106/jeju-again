@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import ProfileSelection from '@/components/ProfileSelection';
 import ItineraryGenerator from '@/components/ItineraryGenerator';
 import { ProfileType } from '@/types';
@@ -52,6 +53,17 @@ export default function Home() {
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">
                 ♿ 접근성 우선
               </span>
+            </div>
+
+            {/* My Itineraries Link */}
+            <div className="mt-6">
+              <Link
+                href="/my-itineraries"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <span className="text-xl">📚</span>
+                저장된 일정 보기
+              </Link>
             </div>
           </header>
         </div>

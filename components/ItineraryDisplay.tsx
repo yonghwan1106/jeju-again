@@ -15,6 +15,44 @@ export default function ItineraryDisplay({
   onGenerateNew,
 }: ItineraryDisplayProps) {
   const [showCongestion, setShowCongestion] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  const handleSaveItinerary = async () => {
+    setIsSaving(true);
+    setSaveMessage(null);
+
+    try {
+      const response = await fetch('/api/save-itinerary', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(itinerary),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save itinerary');
+      }
+
+      const data = await response.json();
+
+      // Save ID to localStorage
+      const savedIds = JSON.parse(localStorage.getItem('savedItineraries') || '[]');
+      savedIds.push(data.id);
+      localStorage.setItem('savedItineraries', JSON.stringify(savedIds));
+
+      setSaveMessage({ type: 'success', text: `일정이 저장되었습니다! (ID: ${data.id})` });
+
+      // Clear message after 5 seconds
+      setTimeout(() => setSaveMessage(null), 5000);
+    } catch (error) {
+      console.error('Error saving itinerary:', error);
+      setSaveMessage({ type: 'error', text: '일정 저장에 실패했습니다. 다시 시도해주세요.' });
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -33,7 +71,7 @@ export default function ItineraryDisplay({
               </p>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setShowCongestion(!showCongestion)}
               className={`px-5 py-3 rounded-xl font-medium transition-all duration-300 ${
@@ -47,6 +85,15 @@ export default function ItineraryDisplay({
               </span>
             </button>
             <button
+              onClick={handleSaveItinerary}
+              disabled={isSaving}
+              className="px-5 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 disabled:from-gray-400 disabled:to-gray-500 text-white rounded-xl font-medium transition-all duration-300 shadow-lg"
+            >
+              <span className="flex items-center gap-2">
+                {isSaving ? '⏳' : '💾'} {isSaving ? '저장 중...' : '일정 저장'}
+              </span>
+            </button>
+            <button
               onClick={onGenerateNew}
               className="px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl font-medium transition-all duration-300 shadow-lg"
             >
@@ -54,6 +101,19 @@ export default function ItineraryDisplay({
             </button>
           </div>
         </div>
+
+        {saveMessage && (
+          <div className={`mb-6 p-4 rounded-xl border-2 ${
+            saveMessage.type === 'success'
+              ? 'bg-green-50 border-green-500 text-green-800'
+              : 'bg-red-50 border-red-500 text-red-800'
+          }`}>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">{saveMessage.type === 'success' ? '✅' : '❌'}</span>
+              <p className="font-medium">{saveMessage.text}</p>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6">
