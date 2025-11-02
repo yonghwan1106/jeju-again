@@ -1,37 +1,45 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+
+// Import real data from data files
+import realStatisticsData from '@/data/real/touristStatistics2025.json';
 
 export default function StatisticsPage() {
   const [selectedYear, setSelectedYear] = useState('2025');
-  const [selectedMonth, setSelectedMonth] = useState('11');
+  const [selectedMonth, setSelectedMonth] = useState('8');
 
-  // Mock data based on PDF
+  // Real data from data.ijto.or.kr
   const touristStats = {
-    domestic: { total: 746, change: 7.2, trend: 'up' },
-    foreign: { total: 152, change: 15.6, trend: 'up' },
-    monthly: { total: 37822, change: 0.17, trend: 'up' },
-    vulnerable: { percentage: 86, description: '시니어 & 영유아 동반 가족' },
+    domestic: {
+      total: Math.round(realStatisticsData.yearlyStats.domestic.total / 10000),
+      change: realStatisticsData.yearlyStats.domestic.changeFromLastYear,
+      trend: 'up'
+    },
+    foreign: {
+      total: Math.round(realStatisticsData.yearlyStats.foreign.total / 10000),
+      change: realStatisticsData.yearlyStats.foreign.changeFromLastYear,
+      trend: 'up'
+    },
+    monthly: {
+      total: realStatisticsData.dailyAverage.total,
+      change: realStatisticsData.dailyAverage.changeFromLastWeek,
+      trend: 'up'
+    },
+    vulnerable: {
+      percentage: realStatisticsData.vulnerableTourists.percentage,
+      description: realStatisticsData.vulnerableTourists.description
+    },
   };
 
-  const regionalDistribution = [
-    { region: '제주시 동지역', visitors: 35.2, change: 2.1 },
-    { region: '제주시 서부', visitors: 18.5, change: -1.5 },
-    { region: '제주시 동부', visitors: 12.3, change: 4.2 },
-    { region: '서귀포시 동지역', visitors: 15.8, change: 1.8 },
-    { region: '서귀포시 서부', visitors: 10.2, change: 3.5 },
-    { region: '서귀포시 동부', visitors: 8.0, change: 2.9 },
-  ];
+  const regionalDistribution = realStatisticsData.regionalDistribution;
 
-  const consumptionByIndustry = [
-    { industry: '소매업', amount: 2026, change: 5.2 },
-    { industry: '음식점업', amount: 1872, change: 3.8 },
-    { industry: '숙박업', amount: 956, change: -2.1 },
-    { industry: '운수업', amount: 543, change: 6.7 },
-    { industry: '예술스포츠여가업', amount: 229, change: 8.3 },
-    { industry: '기타서비스업', amount: 171, change: 1.5 },
-  ];
+  const consumptionByIndustry = realStatisticsData.consumptionByIndustry.map(item => ({
+    industry: item.industry,
+    amount: Math.round(item.amount / 100000000), // Convert to 억원
+    change: item.changeFromLastYear
+  }));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
@@ -193,17 +201,17 @@ export default function StatisticsPage() {
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-end pr-3 transition-all duration-500"
-                        style={{ width: `${(region.visitors / 35.2) * 100}%` }}
+                        style={{ width: `${(region.percentage / 35.2) * 100}%` }}
                       >
                         <span className="text-sm font-bold text-white">
-                          {region.visitors}%
+                          {region.percentage}%
                         </span>
                       </div>
                     </div>
                   </div>
                   <div className="w-20 flex-shrink-0 text-right">
-                    <span className={`text-sm font-semibold ${region.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                      {region.change >= 0 ? '+' : ''}{region.change}%
+                    <span className={`text-sm font-semibold ${region.changeFromLastYear >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                      {region.changeFromLastYear >= 0 ? '+' : ''}{region.changeFromLastYear}%
                     </span>
                   </div>
                 </div>
@@ -256,11 +264,12 @@ export default function StatisticsPage() {
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">데이터 출처</h3>
                 <p className="text-sm text-gray-700 leading-relaxed">
-                  본 통계는 <strong>제주관광빅데이터 플랫폼 (data.ijto.or.kr)</strong>의 공개 데이터를 기반으로 하며,
-                  제주특별자치도관광협회, 한국문화관광연구원, 한국공항공사 등 공공기관의 데이터를 활용합니다.
+                  본 통계는 <strong>제주관광빅데이터 플랫폼 (data.ijto.or.kr)</strong>의 {realStatisticsData.lastUpdated} 기준 데이터를 활용합니다.
                   <br />
-                  <span className="text-xs text-gray-600">
-                    * 본 페이지의 수치는 2025년 제주관광 데이터 활용 공모전을 위한 시뮬레이션 데이터입니다.
+                  제주특별자치도관광협회, 한국문화관광연구원, 한국공항공사 등 공공기관의 데이터 기반입니다.
+                  <br />
+                  <span className="text-xs text-gray-600 mt-2 block">
+                    * 최종 갱신: {realStatisticsData.lastUpdated} | 출처: {realStatisticsData.source}
                   </span>
                 </p>
               </div>

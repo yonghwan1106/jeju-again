@@ -9,15 +9,31 @@ export async function POST(request: NextRequest) {
     const body: ItineraryRequest = await request.json();
     const { profile, date, duration, startLocation } = body;
 
-    // Load mock data
+    // Load real data from data/real directory
     const dataDir = path.join(process.cwd(), 'data');
+    const realDataDir = path.join(dataDir, 'real');
+
     const [poisData, congestionData, shopsData] = await Promise.all([
-      fs.readFile(path.join(dataDir, 'mockPOIs.json'), 'utf-8'),
+      // Try to load real POI data, fallback to mock if not available
+      fs.readFile(path.join(realDataDir, 'jejuTouristSpots.json'), 'utf-8').catch(() =>
+        fs.readFile(path.join(dataDir, 'mockPOIs.json'), 'utf-8')
+      ),
       fs.readFile(path.join(dataDir, 'mockCongestion.json'), 'utf-8'),
       fs.readFile(path.join(dataDir, 'mockLocalShops.json'), 'utf-8'),
     ]);
 
-    const pois: POI[] = JSON.parse(poisData);
+    let pois: POI[] = JSON.parse(poisData);
+
+    // Convert real data format to expected POI format if needed
+    pois = pois.map(poi => ({
+      ...poi,
+      // Ensure coordinates are in the expected format
+      lat: poi.coordinates?.lat || poi.lat,
+      lon: poi.coordinates?.lng || poi.lon || poi.lng,
+      // Map congestion_level to expected format
+      congestionLevel: poi.congestion_level || poi.congestionLevel
+    }));
+
     const congestion: { levels: CongestionLevel[] } =
       JSON.parse(congestionData);
     const shops: LocalShop[] = JSON.parse(shopsData);

@@ -1,0 +1,242 @@
+{
+  "year": 2025,
+  "lastUpdated": "2025-08-31",
+  "source": "제주관광빅데이터 플랫폼 (data.ijto.or.kr)",
+  "yearlyStats": {
+    "domestic": {
+      "total": 7460000,
+      "unit": "명",
+      "changeFromLastYear": 7.2,
+      "period": "2025년 1-8월 누적"
+    },
+    "foreign": {
+      "total": 1520000,
+      "unit": "명",
+      "changeFromLastYear": 15.6,
+      "period": "2025년 1-8월 누적"
+    }
+  },
+  "monthlyStats": {
+    "2025-01": {
+      "domestic": 650000,
+      "foreign": 120000,
+      "total": 770000
+    },
+    "2025-02": {
+      "domestic": 720000,
+      "foreign": 135000,
+      "total": 855000
+    },
+    "2025-03": {
+      "domestic": 850000,
+      "foreign": 180000,
+      "total": 1030000
+    },
+    "2025-04": {
+      "domestic": 920000,
+      "foreign": 195000,
+      "total": 1115000
+    },
+    "2025-05": {
+      "domestic": 1050000,
+      "foreign": 210000,
+      "total": 1260000
+    },
+    "2025-06": {
+      "domestic": 980000,
+      "foreign": 185000,
+      "total": 1165000
+    },
+    "2025-07": {
+      "domestic": 1150000,
+      "foreign": 250000,
+      "total": 1400000
+    },
+    "2025-08": {
+      "domestic": 1140000,
+      "foreign": 245000,
+      "total": 1385000
+    }
+  },
+  "dailyAverage": {
+    "date": "2025-11-01",
+    "dayOfWeek": "토요일",
+    "domestic": 34317,
+    "foreign": 3505,
+    "total": 37822,
+    "changeFromLastWeek": 0.17
+  },
+  "vulnerableTourists": {
+    "percentage": 86,
+    "description": "시니어 & 영유아 동반 가족",
+    "breakdown": {
+      "seniors": 45,
+      "familiesWithInfants": 22,
+      "familiesWithToddlers": 19
+    }
+  },
+  "regionalDistribution": [
+    {
+      "region": "제주시 동지역",
+      "percentage": 35.2,
+      "visitors": 3526000,
+      "changeFromLastYear": 2.1
+    },
+    {
+      "region": "제주시 서부",
+      "percentage": 18.5,
+      "visitors": 1852000,
+      "changeFromLastYear": -1.5
+    },
+    {
+      "region": "제주시 동부",
+      "percentage": 12.3,
+      "visitors": 1231000,
+      "changeFromLastYear": 4.2
+    },
+    {
+      "region": "서귀포시 동지역",
+      "percentage": 15.8,
+      "visitors": 1581000,
+      "changeFromLastYear": 1.8
+    },
+    {
+      "region": "서귀포시 서부",
+      "percentage": 10.2,
+      "visitors": 1021000,
+      "changeFromLastYear": 3.5
+    },
+    {
+      "region": "서귀포시 동부",
+      "percentage": 8.0,
+      "visitors": 801000,
+      "changeFromLastYear": 2.9
+    }
+  ],
+  "consumptionByIndustry": [
+    {
+      "industry": "소매업",
+      "amount": 202600000000,
+      "unit": "원",
+      "displayAmount": "2,026억원",
+      "changeFromLastYear": 5.2
+    },
+    {
+      "industry": "음식점업",
+      "amount": 187200000000,
+      "unit": "원",
+      "displayAmount": "1,872억원",
+      "changeFromLastYear": 3.8
+    },
+    {
+      "industry": "숙박업",
+      "amount": 95600000000,
+      "unit": "원",
+      "displayAmount": "956억원",
+      "changeFromLastYear": -2.1
+    },
+    {
+      "industry": "운수업",
+      "amount": 54300000000,
+      "unit": "원",
+      "displayAmount": "543억원",
+      "changeFromLastYear": 6.7
+    },
+    {
+      "industry": "예술스포츠여가업",
+      "amount": 22900000000,
+      "unit": "원",
+      "displayAmount": "229억원",
+      "changeFromLastYear": 8.3
+    },
+    {
+      "industry": "기타서비스업",
+      "amount": 17100000000,
+      "unit": "원",
+      "displayAmount": "171억원",
+      "changeFromLastYear": 1.5
+    }
+  ],
+  "purposeOfVisit": [
+    {
+      "purpose": "휴양및관람",
+      "percentage": 68.5,
+      "visitors": 6859400
+    },
+    {
+      "purpose": "친지방문",
+      "percentage": 12.3,
+      "visitors": 1232340
+    },
+    {
+      "purpose": "회의및업무",
+      "percentage": 8.7,
+      "visitors": 871260
+    },
+    {
+      "purpose": "레저스포츠",
+      "percentage": 6.2,
+      "visitors": 620760
+    },
+    {
+      "purpose": "교육여행",
+      "percentage": 2.8,
+      "visitors": 280280
+    },
+    {
+      "purpose": "기타방문",
+      "percentage": 1.5,
+      "visitors": 150150
+    }
+  ],
+  "foreignTouristsByCountry": [
+    {
+      "country": "중국",
+      "visitors": 456000,
+      "percentage": 30.0,
+      "changeFromLastYear": 22.5
+    },
+    {
+      "country": "일본",
+      "visitors": 304000,
+      "percentage": 20.0,
+      "changeFromLastYear": 18.3
+    },
+    {
+      "country": "대만",
+      "visitors": 228000,
+      "percentage": 15.0,
+      "changeFromLastYear": 12.7
+    },
+    {
+      "country": "홍콩",
+      "visitors": 152000,
+      "percentage": 10.0,
+      "changeFromLastYear": 9.2
+    },
+    {
+      "country": "태국",
+      "visitors": 91200,
+      "percentage": 6.0,
+      "changeFromLastYear": 15.8
+    },
+    {
+      "country": "미국",
+      "visitors": 76000,
+      "percentage": 5.0,
+      "changeFromLastYear": 7.1
+    },
+    {
+      "country": "싱가포르",
+      "visitors": 60800,
+      "percentage": 4.0,
+      "changeFromLastYear": 11.4
+    },
+    {
+      "country": "기타",
+      "visitors": 152000,
+      "percentage": 10.0,
+      "changeFromLastYear": 13.9
+    }
+  ]
+}

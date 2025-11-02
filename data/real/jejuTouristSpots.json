@@ -1,0 +1,542 @@
+[
+  {
+    "id": "POI001",
+    "name": "한라산 국립공원",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.3616, "lng": 126.5292 },
+    "address": "제주특별자치도 제주시 1100로 2070-61",
+    "description": "대한민국 최고봉 한라산. 백록담 정상 등반 코스",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "4-6시간"
+  },
+  {
+    "id": "POI002",
+    "name": "성산일출봉",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.4586, "lng": 126.9424 },
+    "address": "제주특별자치도 서귀포시 성산읍 일출로 284-12",
+    "description": "UNESCO 세계자연유산. 일출 명소",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL", "TODDLER_FAMILY"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI003",
+    "name": "섭지코지",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.4247, "lng": 126.9297 },
+    "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 107",
+    "description": "해안 절경과 유채꽃 명소. 영화 촬영지",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI004",
+    "name": "우도",
+    "category": "섬관광",
+    "coordinates": { "lat": 33.5007, "lng": 126.9545 },
+    "address": "제주특별자치도 제주시 우도면",
+    "description": "산호사해변, 땅콩아이스크림 명소",
+    "profile_target": ["GENERAL", "TODDLER_FAMILY", "ACTIVE_SENIOR"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "3-4시간"
+  },
+  {
+    "id": "POI005",
+    "name": "협재해수욕장",
+    "category": "해변",
+    "coordinates": { "lat": 33.3941, "lng": 126.2397 },
+    "address": "제주특별자치도 제주시 한림읍 협재리",
+    "description": "에메랄드빛 바다와 백사장. 비양도 조망",
+    "profile_target": ["INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI006",
+    "name": "함덕해수욕장",
+    "category": "해변",
+    "coordinates": { "lat": 33.5433, "lng": 126.6689 },
+    "address": "제주특별자치도 제주시 조천읍 함덕리",
+    "description": "제주시 동쪽 대표 해수욕장. 서우봉 조망",
+    "profile_target": ["INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI007",
+    "name": "만장굴",
+    "category": "동굴",
+    "coordinates": { "lat": 33.5267, "lng": 126.7712 },
+    "address": "제주특별자치도 제주시 구좌읍 만장굴길 182",
+    "description": "UNESCO 세계자연유산. 용암동굴",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI008",
+    "name": "천지연폭포",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.2472, "lng": 126.5528 },
+    "address": "제주특별자치도 서귀포시 천지동",
+    "description": "22m 높이 폭포. 야간 조명",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI009",
+    "name": "정방폭포",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.2450, "lng": 126.5742 },
+    "address": "제주특별자치도 서귀포시 칠십리로214번길 37",
+    "description": "바다로 떨어지는 폭포. 동양 유일",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI010",
+    "name": "주상절리대",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.2378, "lng": 126.4242 },
+    "address": "제주특별자치도 서귀포시 이어도로 36-24",
+    "description": "화산암 기둥. 파도 장관",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI011",
+    "name": "오설록 티뮤지엄",
+    "category": "체험관광",
+    "coordinates": { "lat": 33.3062, "lng": 126.2887 },
+    "address": "제주특별자치도 서귀포시 안덕면 신화역사로 15",
+    "description": "녹차박물관 및 카페. 차밭 전망",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI012",
+    "name": "카멜리아힐",
+    "category": "식물원",
+    "coordinates": { "lat": 33.2958, "lng": 126.3856 },
+    "address": "제주특별자치도 서귀포시 안덕면 병악로 166",
+    "description": "동백꽃 정원. 계절별 꽃 축제",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI013",
+    "name": "서귀포 매일올레시장",
+    "category": "전통시장",
+    "coordinates": { "lat": 33.2530, "lng": 126.5608 },
+    "address": "제주특별자치도 서귀포시 중앙로62번길 18",
+    "description": "서귀포 대표 전통시장. 먹거리 천국",
+    "profile_target": ["CARE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI014",
+    "name": "동문시장",
+    "category": "전통시장",
+    "coordinates": { "lat": 33.5127, "lng": 126.5301 },
+    "address": "제주특별자치도 제주시 관덕로14길 20",
+    "description": "제주시 최대 전통시장",
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI015",
+    "name": "제주 절물자연휴양림",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.4681, "lng": 126.6622 },
+    "address": "제주특별자치도 제주시 명림로 584",
+    "description": "삼나무 숲. 산책로",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI016",
+    "name": "비자림",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.4855, "lng": 126.8030 },
+    "address": "제주특별자치도 제주시 구좌읍 비자숲길 55",
+    "description": "천년 비자나무 숲",
+    "profile_target": ["CARE_SENIOR", "ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI017",
+    "name": "제주 돌문화공원",
+    "category": "문화관광",
+    "coordinates": { "lat": 33.4515, "lng": 126.6969 },
+    "address": "제주특별자치도 제주시 조천읍 남조로 2023",
+    "description": "제주 돌 문화 전시. 넓은 공원",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI018",
+    "name": "월정리해변",
+    "category": "해변",
+    "coordinates": { "lat": 33.5566, "lng": 126.7942 },
+    "address": "제주특별자치도 제주시 구좌읍 월정리",
+    "description": "에메랄드빛 바다. 카페거리",
+    "profile_target": ["INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI019",
+    "name": "김녕해수욕장",
+    "category": "해변",
+    "coordinates": { "lat": 33.5566, "lng": 126.7574 },
+    "address": "제주특별자치도 제주시 구좌읍 김녕리",
+    "description": "서핑 명소. 투명한 바다",
+    "profile_target": ["GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI020",
+    "name": "애월 한담해변",
+    "category": "해변",
+    "coordinates": { "lat": 33.4623, "lng": 126.3118 },
+    "address": "제주특별자치도 제주시 애월읍 곽지리",
+    "description": "애월 해안도로 시작점. 카페거리",
+    "profile_target": ["CARE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI021",
+    "name": "송악산",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.2289, "lng": 126.2938 },
+    "address": "제주특별자치도 서귀포시 대정읍 상모리",
+    "description": "낮은 오름. 360도 전망",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI022",
+    "name": "산방산",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.2378, "lng": 126.3126 },
+    "address": "제주특별자치도 서귀포시 안덕면 사계리",
+    "description": "종 모양 화산. 산방굴사",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI023",
+    "name": "제주 절물오름",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.4600, "lng": 126.6633 },
+    "address": "제주특별자치도 제주시 봉개동",
+    "description": "완만한 오름. 초보자 추천",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI024",
+    "name": "산굼부리",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.3775, "lng": 126.7700 },
+    "address": "제주특별자치도 제주시 조천읍 비자림로 768",
+    "description": "천연기념물 분화구",
+    "profile_target": ["CARE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI025",
+    "name": "다랑쉬오름",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.3948, "lng": 126.7694 },
+    "address": "제주특별자치도 제주시 구좌읍 세화리",
+    "description": "유채꽃과 오름. 억새 명소",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": false,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1시간"
+  },
+  {
+    "id": "POI026",
+    "name": "서귀포 치유의 숲",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.2931, "lng": 126.4742 },
+    "address": "제주특별자치도 서귀포시 산록남로 2271-110",
+    "description": "산림욕 코스. 힐링 명소",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI027",
+    "name": "사려니숲길",
+    "category": "자연관광",
+    "coordinates": { "lat": 33.3750, "lng": 126.6292 },
+    "address": "제주특별자치도 제주시 조천읍 교래리",
+    "description": "한국의 가장 아름다운 숲",
+    "profile_target": ["ACTIVE_SENIOR", "GENERAL"],
+    "accessibility": {
+      "stroller": false,
+      "wheelchair": false,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": false
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI028",
+    "name": "제주 허브동산",
+    "category": "식물원",
+    "coordinates": { "lat": 33.2956, "lng": 126.3072 },
+    "address": "제주특별자치도 서귀포시 표선면 돈내코로 170",
+    "description": "허브정원. 포토존",
+    "profile_target": ["CARE_SENIOR", "INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "QUIET",
+    "recommended_time": "1-2시간"
+  },
+  {
+    "id": "POI029",
+    "name": "제주 아쿠아플라넷",
+    "category": "체험관광",
+    "coordinates": { "lat": 33.4287, "lng": 126.9305 },
+    "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 95",
+    "description": "대형 수족관. 아이 동반 추천",
+    "profile_target": ["INFANT_FAMILY", "TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "CROWDED",
+    "recommended_time": "2-3시간"
+  },
+  {
+    "id": "POI030",
+    "name": "제주 민속촌",
+    "category": "문화관광",
+    "coordinates": { "lat": 33.3178, "lng": 126.6347 },
+    "address": "제주특별자치도 서귀포시 표선면 민속해안로 631-34",
+    "description": "제주 전통 가옥 체험",
+    "profile_target": ["TODDLER_FAMILY", "GENERAL"],
+    "accessibility": {
+      "stroller": true,
+      "wheelchair": true,
+      "parking": true,
+      "restroom": true,
+      "nursing_room": true
+    },
+    "congestion_level": "NORMAL",
+    "recommended_time": "2-3시간"
+  }
+]
