@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 // Import real data from data files
 import realStatisticsData from '@/data/real/touristStatistics2025.json';
+import downloadedData from '@/data/real/touristStatistics202508.json';
 
 export default function StatisticsPage() {
   const [selectedYear, setSelectedYear] = useState('2025');
@@ -254,6 +255,113 @@ export default function StatisticsPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* Real Downloaded Data - Monthly Breakdown */}
+          <section className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+              <span>📥</span> 실제 다운로드 데이터 - 월간 상세 분석 (2025년 8월)
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* Domestic Tourists */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
+                  <span>🇰🇷</span> 내국인 입도객 상세
+                </h3>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm text-gray-600 mb-1">총 입도객</p>
+                    <p className="text-3xl font-bold text-blue-700">
+                      {downloadedData.domestic.total.toLocaleString()}
+                      <span className="text-sm text-gray-500 ml-2">명</span>
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm font-semibold text-gray-700 mb-3">방문 목적별</p>
+                    <div className="space-y-2">
+                      {Object.entries(downloadedData.domestic.byPurpose)
+                        .sort(([, a]: any, [, b]: any) => (b as number) - (a as number))
+                        .slice(0, 5)
+                        .map(([purpose, count]: [string, any]) => (
+                          <div key={purpose} className="flex justify-between items-center">
+                            <span className="text-sm text-gray-600">{purpose}</span>
+                            <span className="text-sm font-semibold text-gray-800">
+                              {(count as number).toLocaleString()}명
+                            </span>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Foreign Tourists */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-green-900 mb-4 flex items-center gap-2">
+                  <span>🌍</span> 외국인 입도객 상세
+                </h3>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm text-gray-600 mb-1">총 입도객</p>
+                    <p className="text-3xl font-bold text-green-700">
+                      {downloadedData.foreign.total.toLocaleString()}
+                      <span className="text-sm text-gray-500 ml-2">명</span>
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-lg p-4 grid grid-cols-2 gap-4">
+                    <div>
+                      <p className="text-xs text-gray-600 mb-1">제주 직항</p>
+                      <p className="text-lg font-bold text-green-700">
+                        {downloadedData.foreign.jejuDirect.toLocaleString()}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-600 mb-1">한국 경유</p>
+                      <p className="text-lg font-bold text-green-700">
+                        {downloadedData.foreign.viaKorea.toLocaleString()}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm font-semibold text-gray-700 mb-3">국가별 Top 5</p>
+                    <div className="space-y-2">
+                      {downloadedData.foreign.topCountries.slice(0, 5).map((country: any, index: number) => (
+                        <div key={country.country} className="flex justify-between items-center">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-bold text-gray-400">{index + 1}</span>
+                            <span className="text-sm text-gray-600">{country.country}</span>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-sm font-semibold text-gray-800">
+                              {country.visitors.toLocaleString()}
+                            </span>
+                            <span className="text-xs text-gray-500 ml-1">
+                              ({country.percentage}%)
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-4">
+              <p className="text-sm text-gray-700">
+                <span className="font-semibold">📌 실제 데이터:</span> 위 통계는 data.ijto.or.kr에서 직접 다운로드한
+                <strong> 2025년 8월 실제 입도 통계 데이터</strong>입니다.
+                CSV 파일을 분석하여 자동으로 집계된 결과를 표시하고 있습니다.
+                <br />
+                <span className="text-xs text-gray-600 mt-1 block">
+                  출처: 제주관광협회 | 데이터 갱신: {downloadedData.lastUpdated} | {downloadedData.source}
+                </span>
+              </p>
             </div>
           </section>
 
