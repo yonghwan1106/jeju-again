@@ -22,16 +22,23 @@ export async function POST(request: NextRequest) {
       fs.readFile(path.join(dataDir, 'mockLocalShops.json'), 'utf-8'),
     ]);
 
-    let pois: POI[] = JSON.parse(poisData);
+    let rawPois: any[] = JSON.parse(poisData);
 
     // Convert real data format to expected POI format if needed
-    pois = pois.map(poi => ({
-      ...poi,
+    const pois: POI[] = rawPois.map(poi => ({
+      id: poi.id,
+      name: poi.name,
+      category: poi.category,
+      region: poi.address || poi.region || '',
       // Ensure coordinates are in the expected format
       lat: poi.coordinates?.lat || poi.lat,
       lon: poi.coordinates?.lng || poi.lon || poi.lng,
-      // Map congestion_level to expected format
-      congestionLevel: poi.congestion_level || poi.congestionLevel
+      profile_target: poi.profile_target || [],
+      accessibility: poi.accessibility || {
+        stroller: false,
+        wheelchair: false,
+        parking: false
+      }
     }));
 
     const congestion: { levels: CongestionLevel[] } =
