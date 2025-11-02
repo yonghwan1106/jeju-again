@@ -14,6 +14,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '제주특별자치도 내국인 입도 통계',
           source: '제주특별자치도관광협회',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
         {
           name: '제주 외국인 입도 통계',
@@ -21,6 +22,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '제주특별자치도 외국인 입도 통계',
           source: '제주특별자치도관광협회, 한국문화관광연구원',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
         {
           name: '지역별 관광객 현황',
@@ -28,6 +30,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '내국인 관광객 기준, 블록별/읍면동별 현황',
           source: '제주관광빅데이터 플랫폼',
+          downloadUrl: 'https://data.ijto.or.kr/content/CO2023122815183301YL2GC',
         },
         {
           name: '지역별 여행 키워드',
@@ -35,6 +38,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '통신사 기준 방문지역 순위 및 비짓제주 여행지 키워드',
           source: '제주관광빅데이터 플랫폼',
+          downloadUrl: 'https://data.ijto.or.kr/content/CO20231229115045018ZGHC',
         },
       ],
     },
@@ -48,6 +52,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '업종별, 지역별, 출신지역별 소비금액 추이 및 분석',
           source: '카드사 데이터',
+          downloadUrl: 'https://data.ijto.or.kr/content/CO202408211000000100QMF',
         },
         {
           name: '업종별 소비분석',
@@ -55,6 +60,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '관광객 구분(내/외국인), 업종별 매출액 및 증감율',
           source: '제주관광빅데이터 플랫폼',
+          downloadUrl: 'https://data.ijto.or.kr/content/CO202408211000000100QMF',
         },
         {
           name: '월간 제주 외식물가',
@@ -62,6 +68,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '품목별 외식물가 현황 (김밥~칼국수 등)',
           source: '제주특별자치도',
+          downloadUrl: 'https://data.ijto.or.kr/content/CO20231229151527014VAXZ',
         },
       ],
     },
@@ -75,6 +82,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '월별 제주 운항편 및 여객 수',
           source: '한국공항공사',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
         {
           name: '여객선 이용객',
@@ -82,6 +90,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '항로별 여객 수송 현황(여객, 차량, 화물)',
           source: '한국해양교통안전공단 제주운항센터',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
         {
           name: '렌터카 가동률',
@@ -89,6 +98,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '렌터카 등록대수, 대여 시간, 가동률 등',
           source: '제주특별자치도 렌터카조합',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
         {
           name: '한라산 탐방객',
@@ -96,6 +106,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '한라산 탐방객 통계',
           source: '제주특별자치도 한라산국립공원관리소',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
         {
           name: '제주 섬 속의 섬 이동객',
@@ -103,6 +114,7 @@ export default function DataCenterPage() {
           format: 'Excel / CSV',
           description: '우도, 가파도, 마라도, 비양도, 추자도 이동객',
           source: '제주지방해양경찰청, 한국해양교통안전공단',
+          downloadUrl: 'https://data.ijto.or.kr/community/board-1/BM2023112115235401NULQZI',
         },
       ],
     },
@@ -179,12 +191,14 @@ export default function DataCenterPage() {
                         </p>
                       </div>
                       <div className="ml-4">
-                        <button
-                          className="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg"
-                          onClick={() => alert('실제 배포 시 data.ijto.or.kr의 API를 연동하여 다운로드 기능을 제공합니다.')}
+                        <a
+                          href={item.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg"
                         >
                           📥 다운로드
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-4 text-sm">
