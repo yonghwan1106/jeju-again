@@ -11,6 +11,7 @@ export default function Navigation() {
     { href: '/about', label: '프로젝트 소개' },
     { href: '/statistics', label: '관광 통계' },
     { href: '/data-center', label: '데이터 센터' },
+    { href: '/presentation', label: '발표자료' },
     { href: '/my-itineraries', label: '저장된 일정' },
   ];
 
