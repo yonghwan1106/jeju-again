@@ -39,6 +39,14 @@ export default function PresentationPage() {
     setCurrentSlide((prev) => Math.max(prev - 1, 0));
   };
 
+  const firstSlide = () => {
+    setCurrentSlide(0);
+  };
+
+  const lastSlide = () => {
+    setCurrentSlide(totalSlides - 1);
+  };
+
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gray-900">
       {/* Slide Content */}
@@ -54,6 +62,8 @@ export default function PresentationPage() {
         totalSlides={totalSlides}
         onPrevious={previousSlide}
         onNext={nextSlide}
+        onFirst={firstSlide}
+        onLast={lastSlide}
       />
 
       {/* Keyboard Hints */}
