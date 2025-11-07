@@ -18,8 +18,10 @@ export default function Slide({ children, className = '', backgroundColor = 'bg-
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className={`h-screen w-full flex items-center justify-center overflow-hidden ${backgroundColor} ${className}`}
     >
-      <div className="max-w-7xl w-full px-6 py-6 max-h-screen overflow-y-auto">
-        {children}
+      <div className="max-w-7xl w-full px-6 py-6 h-full flex items-center justify-center overflow-hidden">
+        <div className="w-full">
+          {children}
+        </div>
       </div>
     </motion.div>
   );

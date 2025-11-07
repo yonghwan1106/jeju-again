@@ -282,50 +282,50 @@ export const slides = [
 
   // Slide 6: 차별성 - 우리가 다른 이유
   <Slide key="6">
-    <div className="space-y-8">
-      <h2 className="text-6xl font-black text-gray-800 mb-10 text-center">
+    <div className="space-y-4">
+      <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">
         <span className="text-blue-600">🆚</span> 왜 우리는 다른가?
       </h2>
 
       {/* vs 비짓제주 */}
-      <div className="bg-gradient-to-r from-red-50 to-blue-50 p-8 rounded-3xl shadow-2xl mb-8">
-        <h3 className="text-3xl font-bold text-center mb-8 text-gray-800">
+      <div className="bg-gradient-to-r from-red-50 to-blue-50 p-4 rounded-2xl shadow-xl mb-3">
+        <h3 className="text-2xl font-bold text-center mb-3 text-gray-800">
           vs. 비짓제주 '실시간 혼잡도'
         </h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-red-100 border-4 border-red-400 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-6xl">❌</span>
-              <span className="text-3xl font-bold text-red-700">기존 서비스</span>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-red-100 border-2 border-red-400 p-4 rounded-xl">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-4xl">❌</span>
+              <span className="text-xl font-bold text-red-700">기존 서비스</span>
             </div>
-            <div className="bg-white p-6 rounded-xl mb-4">
-              <p className="text-2xl text-gray-700 mb-3">"여기가 혼잡합니다"</p>
-              <p className="text-xl text-red-600 font-bold">→ 수동적 정보 제공에 그침</p>
+            <div className="bg-white p-3 rounded-lg mb-2">
+              <p className="text-base text-gray-700 mb-1">"여기가 혼잡합니다"</p>
+              <p className="text-sm text-red-600 font-bold">→ 수동적 정보 제공에 그침</p>
             </div>
-            <div className="text-lg text-gray-600 space-y-2">
+            <div className="text-sm text-gray-600 space-y-1">
               <p>• 사용자가 직접 대안 찾아야 함</p>
               <p>• 어디로 가야 할지 모름</p>
               <p>• 결국 같은 곳으로 집중</p>
             </div>
           </div>
 
-          <div className="bg-green-100 border-4 border-green-500 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-6xl">✅</span>
-              <span className="text-3xl font-bold text-green-700">JejU-Again</span>
+          <div className="bg-green-100 border-2 border-green-500 p-4 rounded-xl">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-4xl">✅</span>
+              <span className="text-xl font-bold text-green-700">JejU-Again</span>
             </div>
-            <div className="bg-white p-6 rounded-xl mb-4 shadow-lg">
-              <p className="text-2xl text-gray-700 mb-3">"혼잡하니 <strong className="text-green-600">B 목장</strong>으로 변경합니다"</p>
-              <p className="text-xl text-green-600 font-bold">→ 능동적 문제 해결</p>
+            <div className="bg-white p-3 rounded-lg mb-2 shadow-md">
+              <p className="text-base text-gray-700 mb-1">"혼잡하니 <strong className="text-green-600">B 목장</strong>으로 변경합니다"</p>
+              <p className="text-sm text-green-600 font-bold">→ 능동적 문제 해결</p>
             </div>
-            <div className="text-lg text-gray-600 space-y-2">
-              <p className="flex items-center gap-2">
+            <div className="text-sm text-gray-600 space-y-1">
+              <p className="flex items-center gap-1">
                 <span className="text-green-600">✓</span> AI가 즉시 대안 제시
               </p>
-              <p className="flex items-center gap-2">
+              <p className="flex items-center gap-1">
                 <span className="text-green-600">✓</span> 프로필 맞춤 추천
               </p>
-              <p className="flex items-center gap-2">
+              <p className="flex items-center gap-1">
                 <span className="text-green-600">✓</span> 자동 경로 변경
               </p>
             </div>
@@ -334,38 +334,38 @@ export const slides = [
       </div>
 
       {/* vs 이지제주/휠내비길 */}
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl">
-        <h3 className="text-3xl font-bold text-center mb-8 text-gray-800">
+      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-2xl shadow-xl">
+        <h3 className="text-2xl font-bold text-center mb-3 text-gray-800">
           vs. 이지제주 / 휠내비길
         </h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-purple-100 border-4 border-purple-400 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-6xl">❌</span>
-              <span className="text-3xl font-bold text-purple-700">기존 서비스</span>
+        <div className="grid md:grid-cols-2 gap-4 mb-3">
+          <div className="bg-purple-100 border-2 border-purple-400 p-4 rounded-xl">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-4xl">❌</span>
+              <span className="text-xl font-bold text-purple-700">기존 서비스</span>
             </div>
-            <div className="text-center bg-white p-8 rounded-xl mb-4">
-              <div className="text-7xl font-black text-purple-600 mb-3">13.5%</div>
-              <p className="text-xl font-bold text-gray-700">무장애 시장</p>
-              <p className="text-gray-600 mt-2">(휠체어 등 물리적 접근성)</p>
+            <div className="text-center bg-white p-4 rounded-lg">
+              <div className="text-5xl font-black text-purple-600 mb-1">13.5%</div>
+              <p className="text-base font-bold text-gray-700">무장애 시장</p>
+              <p className="text-xs text-gray-600 mt-1">(휠체어 등 물리적 접근성)</p>
             </div>
           </div>
 
-          <div className="bg-green-100 border-4 border-green-500 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-6xl">✅</span>
-              <span className="text-3xl font-bold text-green-700">JejU-Again</span>
+          <div className="bg-green-100 border-2 border-green-500 p-4 rounded-xl">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-4xl">✅</span>
+              <span className="text-xl font-bold text-green-700">JejU-Again</span>
             </div>
-            <div className="text-center bg-white p-8 rounded-xl mb-4 shadow-lg">
-              <div className="text-7xl font-black text-green-600 mb-3">86%</div>
-              <p className="text-xl font-bold text-gray-700">다수 관광약자 시장</p>
-              <p className="text-gray-600 mt-2">(시니어/영유아 경험적 접근성)</p>
+            <div className="text-center bg-white p-4 rounded-lg shadow-md">
+              <div className="text-5xl font-black text-green-600 mb-1">86%</div>
+              <p className="text-base font-bold text-gray-700">다수 관광약자 시장</p>
+              <p className="text-xs text-gray-600 mt-1">(시니어/영유아 경험적 접근성)</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl text-center">
-          <p className="text-4xl font-black">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-xl text-center">
+          <p className="text-2xl font-black">
             <span className="text-yellow-300">6.5배</span> 더 큰 시장 + 능동적 문제 해결
           </p>
         </div>
