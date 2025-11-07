@@ -46,7 +46,7 @@ export const slides = [
           <p className="text-4xl font-light text-[#1A1A1A]">
             가장 빠른 길이 아닌,
           </p>
-          <MarkerHighlight className="text-4xl font-bold text-[#1A1A1A]" style={{ color: '#F7F052' }}>
+          <MarkerHighlight className="text-4xl font-bold text-[#1A1A1A]" style={{ color: '#FF6B35' }}>
             가장 편안한 길
           </MarkerHighlight>
           <WobblyUnderline className="mt-2 text-[#FF6B35]" />
@@ -998,7 +998,7 @@ export const slides = [
         <p className="text-2xl font-light text-[#1A1A1A]">
           "가장 빠른 길이 아닌,
         </p>
-        <MarkerHighlight className="text-2xl font-bold text-[#1A1A1A] inline-block mt-1" style={{ color: '#F7F052' }}>
+        <MarkerHighlight className="text-2xl font-bold text-[#1A1A1A] inline-block mt-1" style={{ color: '#FF6B35' }}>
           가장 편안한 길"
         </MarkerHighlight>
         <WobblyUnderline className="mt-1 text-[#FF6B35] w-72 mx-auto" />
