@@ -1,1208 +1,1073 @@
 import Slide from './components/Slide';
+import Image from 'next/image';
+import {
+  ScribbleCircle,
+  ChunkyArrow,
+  WobblyUnderline,
+  StarBurst,
+  ExclamationDoodle,
+  ScribbleX,
+  CheckmarkScribble,
+  MarkerHighlight,
+  BrutalistBox,
+  StampBox
+} from './components/HandDrawn';
 
 export const slides = [
-  // Slide 1: 임팩트 있는 표지
-  <Slide key="1" backgroundColor="bg-gradient-to-br from-blue-700 via-purple-700 to-pink-600">
-    <div className="text-center text-white space-y-10">
-      <div className="text-8xl mb-12 animate-bounce">🏝️</div>
-      <h1 className="text-7xl font-black mb-6 tracking-tight">
-        JejU-Again
-      </h1>
-      <h2 className="text-5xl font-bold mb-8 text-blue-100">
-        제주어게인
-      </h2>
-      <div className="bg-white/10 backdrop-blur-md px-12 py-6 rounded-2xl inline-block mb-8">
-        <p className="text-3xl font-semibold leading-relaxed">
-          데이터 기반 <span className="text-yellow-300">'관광약자-지역상생'</span><br/>
-          맞춤형 내비게이션
-        </p>
-      </div>
-      <div className="text-4xl font-light italic text-blue-100 mb-12 border-t-2 border-b-2 border-white/30 py-6">
-        "가장 빠른 길이 아닌, 가장 편안한 길"
-      </div>
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-10 py-5 rounded-xl inline-block shadow-2xl">
-        <p className="text-2xl font-black">2025 제주관광 데이터 활용 공모전 출품작</p>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 2: 충격적인 문제 제시 - 숫자로 말하다
-  <Slide key="2" backgroundColor="bg-black">
-    <div className="space-y-12">
-      <h2 className="text-6xl font-black text-white mb-12 text-center">
-        <span className="text-red-500">⚠️</span> 제주 관광의 민낯
-      </h2>
-
-      <div className="grid md:grid-cols-2 gap-8">
-        {/* 왼쪽: 오버투어리즘 */}
-        <div className="bg-gradient-to-br from-red-600 to-red-800 p-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform">
-          <div className="text-center mb-8">
-            <div className="text-9xl font-black text-white mb-4">90%</div>
-            <div className="text-3xl font-bold text-red-100">쏠림 현상</div>
-          </div>
-          <div className="space-y-4 text-white text-xl">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">🏖️</span>
-              <span>특정 해안가에 관광객 과밀화</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">😫</span>
-              <span>관광객 만족도 저하</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">💢</span>
-              <span>주민 피로도 급증</span>
-            </div>
-          </div>
-        </div>
-
-        {/* 오른쪽: 언더투어리즘 */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-900 p-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform">
-          <div className="text-center mb-8">
-            <div className="text-9xl font-black text-white mb-4">10%</div>
-            <div className="text-3xl font-bold text-blue-100">소외 지역</div>
-          </div>
-          <div className="space-y-4 text-white text-xl">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">🏘️</span>
-              <span>읍면 지역 상권 침체</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">📉</span>
-              <span>관광 수익 불균형</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">🚫</span>
-              <span>지역 균형 발전 저해</span>
-            </div>
-          </div>
-        </div>
+  // Slide 1: Neo-Brutalist Title Slide
+  <Slide key="1" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-between py-12">
+      {/* Top-left corner */}
+      <div className="relative">
+        <div className="text-6xl mb-2">🏝️</div>
+        <ScribbleCircle className="w-24 h-24 -top-4 -left-4 text-[#FF6B35]" style={{ strokeWidth: 4 }} />
+        <h1 className="text-8xl font-black tracking-tight text-[#1A1A1A] mb-2" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+          JEJU-AGAIN
+        </h1>
+        <div className="border-b-4 border-[#1A1A1A] w-64 mb-3" />
+        <p className="text-4xl font-bold text-[#1A1A1A]">제주어게인</p>
       </div>
 
-      <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 p-8 rounded-2xl text-center">
-        <p className="text-4xl font-black text-white">
-          이 두 문제를 <span className="text-black">동시에</span> 해결할 수 있다면?
-        </p>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 3: 86% 충격 - 거대 시장 발견
-  <Slide key="3" backgroundColor="bg-gradient-to-br from-orange-500 via-red-500 to-pink-600">
-    <div className="space-y-6">
-      <h2 className="text-5xl font-black text-white mb-4 text-center">
-        <span className="text-yellow-300">👥</span> 정책의 사각지대를 발견하다
-      </h2>
-
-      {/* 거대한 86% 숫자 */}
-      <div className="bg-white/20 backdrop-blur-xl p-8 rounded-3xl text-center mb-4">
-        <div className="text-[8rem] font-black text-white leading-none mb-2">
-          86%
-        </div>
-        <div className="text-3xl font-bold text-yellow-200 mb-3">
-          연간 148만 명의 '진짜' 관광약자
-        </div>
-        <div className="text-xl text-white/90">
-          하지만 <span className="text-red-200 font-bold">정책 지원은 0%</span>
-        </div>
-      </div>
-
-      {/* 구성 비율 */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="bg-blue-600 p-6 rounded-2xl shadow-xl">
-          <div className="text-6xl text-center mb-2">👴👵</div>
-          <div className="text-5xl font-black text-white text-center mb-1">51%</div>
-          <div className="text-xl font-bold text-blue-100 text-center mb-2">65세 이상 시니어</div>
-          <div className="text-lg text-white text-center">연 75만 명</div>
-        </div>
-
-        <div className="bg-pink-600 p-6 rounded-2xl shadow-xl">
-          <div className="text-6xl text-center mb-2">👶👨‍👩‍👧</div>
-          <div className="text-5xl font-black text-white text-center mb-1">35%</div>
-          <div className="text-xl font-bold text-pink-100 text-center mb-2">4세 이하 영유아 동반</div>
-          <div className="text-lg text-white text-center">연 52만 명</div>
-        </div>
-      </div>
-
-      {/* 기존 정책 비교 */}
-      <div className="bg-black/40 backdrop-blur-md p-6 rounded-2xl">
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-red-400 mb-1">13.5%</div>
-            <div className="text-lg text-white">기존 정책 대상<br/>(휠체어 등 무장애)</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-1">6.5배</div>
-            <div className="text-lg text-white">더 큰 시장<br/>(시니어 + 영유아)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 4: 진짜 불편함 - 경험적 장벽
-  <Slide key="4">
-    <div className="space-y-6">
-      <h2 className="text-5xl font-black text-gray-800 mb-6 text-center">
-        <span className="text-orange-600">💥</span> 진짜 불편함은 무엇인가?
-      </h2>
-
-      <div className="grid md:grid-cols-2 gap-4 mb-4">
-        <div className="bg-red-50 border-2 border-red-400 p-6 rounded-xl">
-          <h3 className="text-2xl font-black text-red-700 mb-4 text-center">
-            ❌ 기존 정책의 착각
-          </h3>
-          <div className="space-y-2 text-base text-gray-700">
-            <div className="bg-white p-3 rounded-lg">
-              <p className="font-bold text-red-600 mb-1">물리적 접근성</p>
-              <p className="text-sm">휠체어 경사로, 엘리베이터</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg">
-              <p className="font-bold text-red-600 mb-1">대상</p>
-              <p className="text-sm">장애인 13.5% 시장</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg">
-              <p className="font-bold text-red-600 mb-1">접근</p>
-              <p className="text-sm">시설 개선 중심</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-green-50 border-2 border-green-500 p-6 rounded-xl">
-          <h3 className="text-2xl font-black text-green-700 mb-4 text-center">
-            ✅ 진짜 문제
-          </h3>
-          <div className="space-y-2 text-base text-gray-700">
-            <div className="bg-white p-3 rounded-lg shadow-md">
-              <p className="font-bold text-green-600 mb-1">경험적 장벽</p>
-              <p className="text-sm"><strong>극심한 혼잡, 소음, 긴 대기시간</strong></p>
-            </div>
-            <div className="bg-white p-3 rounded-lg shadow-md">
-              <p className="font-bold text-green-600 mb-1">대상</p>
-              <p className="text-sm"><strong>시니어 + 영유아 86% 시장</strong></p>
-            </div>
-            <div className="bg-white p-3 rounded-lg shadow-md">
-              <p className="font-bold text-green-600 mb-1">접근</p>
-              <p className="text-sm"><strong>데이터 기반 혼잡 회피</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 실제 고통 포인트 */}
-      <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-2xl">
-        <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">86% 관광약자가 겪는 실제 고통</h4>
-        <div className="grid md:grid-cols-4 gap-3">
-          <div className="bg-white p-4 rounded-xl text-center">
-            <div className="text-4xl mb-2">😫</div>
-            <p className="font-bold text-red-600 text-sm">극심한 혼잡</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl text-center">
-            <div className="text-4xl mb-2">🔊</div>
-            <p className="font-bold text-orange-600 text-sm">소음 스트레스</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl text-center">
-            <div className="text-4xl mb-2">⏰</div>
-            <p className="font-bold text-yellow-600 text-sm">긴 대기시간</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl text-center">
-            <div className="text-4xl mb-2">❓</div>
-            <p className="font-bold text-purple-600 text-sm">예측 불가능</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 5: 유레카! - Nexus 발견
-  <Slide key="5" backgroundColor="bg-gradient-to-br from-green-400 via-blue-500 to-purple-600">
-    <div className="space-y-6 text-white">
-      <div className="text-center mb-4">
-        <div className="text-6xl mb-3">💡</div>
-        <h2 className="text-5xl font-black mb-2">
-          EUREKA!
-        </h2>
-        <p className="text-2xl font-semibold">두 문제의 교차점을 발견하다</p>
-      </div>
-
-      {/* 데이터 인사이트 */}
-      <div className="bg-white/20 backdrop-blur-xl p-6 rounded-3xl mb-4">
-        <h3 className="text-3xl font-bold mb-4 text-center text-yellow-300">
-          🔍 데이터 분석 결과
-        </h3>
-        <div className="bg-white text-gray-800 p-6 rounded-2xl text-xl leading-relaxed text-center">
-          <p className="mb-4">
-            <span className="text-orange-600 font-black text-3xl">86%</span> 관광약자는<br/>
-            일반 관광객과 <strong className="text-blue-700">전혀 다른</strong> 선호도를 보인다
+      {/* Center-right, tilted box */}
+      <div className="relative ml-auto w-3/4 transform -rotate-2">
+        <BrutalistBox className="bg-white p-10" borderColor="border-[#FF6B35]">
+          <p className="text-3xl font-bold text-[#1A1A1A] leading-relaxed">
+            데이터 기반<br/>
+            <span className="text-[#FF6B35]">'관광약자-지역상생'</span><br/>
+            맞춤형 내비게이션
           </p>
-          <div className="grid md:grid-cols-3 gap-3 mt-4">
-            <div className="bg-green-100 p-4 rounded-xl">
-              <div className="text-4xl mb-2">🌲</div>
-              <p className="font-bold text-green-700">숲, 오름</p>
-            </div>
-            <div className="bg-blue-100 p-4 rounded-xl">
-              <div className="text-4xl mb-2">🏘️</div>
-              <p className="font-bold text-blue-700">읍면 지역</p>
-            </div>
-            <div className="bg-purple-100 p-4 rounded-xl">
-              <div className="text-4xl mb-2">🎨</div>
-              <p className="font-bold text-purple-700">체험 콘텐츠</p>
-            </div>
-          </div>
-        </div>
+        </BrutalistBox>
       </div>
 
-      {/* 완벽한 매칭 */}
-      <div className="bg-black/30 backdrop-blur-md p-6 rounded-2xl">
-        <div className="flex items-center justify-center gap-4 text-2xl font-bold">
-          <div className="bg-orange-500 px-6 py-4 rounded-xl text-center">
-            <div className="text-4xl mb-1">👥</div>
-            <div>86% 관광약자<br/>선호 콘텐츠</div>
-          </div>
-          <div className="text-4xl">⚡</div>
-          <div className="bg-blue-600 px-6 py-4 rounded-xl text-center">
-            <div className="text-4xl mb-1">🏘️</div>
-            <div>언더투어리즘<br/>지역 자산</div>
-          </div>
-          <div className="text-4xl">=</div>
-          <div className="bg-green-500 px-6 py-4 rounded-xl text-center">
-            <div className="text-4xl mb-1">✨</div>
-            <div>완벽한<br/>매칭!</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-yellow-400 text-gray-900 p-6 rounded-2xl text-center">
-        <p className="text-3xl font-black">
-          단 하나의 솔루션으로 두 거대 난제 동시 해결!
-        </p>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 6: 차별성 - 우리가 다른 이유
-  <Slide key="6">
-    <div className="space-y-4">
-      <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">
-        <span className="text-blue-600">🆚</span> 왜 우리는 다른가?
-      </h2>
-
-      {/* vs 비짓제주 */}
-      <div className="bg-gradient-to-r from-red-50 to-blue-50 p-4 rounded-2xl shadow-xl mb-3">
-        <h3 className="text-2xl font-bold text-center mb-3 text-gray-800">
-          vs. 비짓제주 '실시간 혼잡도'
-        </h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-red-100 border-2 border-red-400 p-4 rounded-xl">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-4xl">❌</span>
-              <span className="text-xl font-bold text-red-700">기존 서비스</span>
-            </div>
-            <div className="bg-white p-3 rounded-lg mb-2">
-              <p className="text-base text-gray-700 mb-1">"여기가 혼잡합니다"</p>
-              <p className="text-sm text-red-600 font-bold">→ 수동적 정보 제공에 그침</p>
-            </div>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p>• 사용자가 직접 대안 찾아야 함</p>
-              <p>• 어디로 가야 할지 모름</p>
-              <p>• 결국 같은 곳으로 집중</p>
-            </div>
-          </div>
-
-          <div className="bg-green-100 border-2 border-green-500 p-4 rounded-xl">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-4xl">✅</span>
-              <span className="text-xl font-bold text-green-700">JejU-Again</span>
-            </div>
-            <div className="bg-white p-3 rounded-lg mb-2 shadow-md">
-              <p className="text-base text-gray-700 mb-1">"혼잡하니 <strong className="text-green-600">B 목장</strong>으로 변경합니다"</p>
-              <p className="text-sm text-green-600 font-bold">→ 능동적 문제 해결</p>
-            </div>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p className="flex items-center gap-1">
-                <span className="text-green-600">✓</span> AI가 즉시 대안 제시
-              </p>
-              <p className="flex items-center gap-1">
-                <span className="text-green-600">✓</span> 프로필 맞춤 추천
-              </p>
-              <p className="flex items-center gap-1">
-                <span className="text-green-600">✓</span> 자동 경로 변경
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* vs 이지제주/휠내비길 */}
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-2xl shadow-xl">
-        <h3 className="text-2xl font-bold text-center mb-3 text-gray-800">
-          vs. 이지제주 / 휠내비길
-        </h3>
-        <div className="grid md:grid-cols-2 gap-4 mb-3">
-          <div className="bg-purple-100 border-2 border-purple-400 p-4 rounded-xl">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-4xl">❌</span>
-              <span className="text-xl font-bold text-purple-700">기존 서비스</span>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg">
-              <div className="text-5xl font-black text-purple-600 mb-1">13.5%</div>
-              <p className="text-base font-bold text-gray-700">무장애 시장</p>
-              <p className="text-xs text-gray-600 mt-1">(휠체어 등 물리적 접근성)</p>
-            </div>
-          </div>
-
-          <div className="bg-green-100 border-2 border-green-500 p-4 rounded-xl">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-4xl">✅</span>
-              <span className="text-xl font-bold text-green-700">JejU-Again</span>
-            </div>
-            <div className="text-center bg-white p-4 rounded-lg shadow-md">
-              <div className="text-5xl font-black text-green-600 mb-1">86%</div>
-              <p className="text-base font-bold text-gray-700">다수 관광약자 시장</p>
-              <p className="text-xs text-gray-600 mt-1">(시니어/영유아 경험적 접근성)</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-xl text-center">
-          <p className="text-2xl font-black">
-            <span className="text-yellow-300">6.5배</span> 더 큰 시장 + 능동적 문제 해결
-          </p>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 7: 데이터 엔진 - 3단계 로직
-  <Slide key="7" backgroundColor="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
-    <div className="space-y-4 text-white">
-      <h2 className="text-4xl font-black mb-4 text-center">
-        <span className="text-yellow-300">⚙️</span> 데이터 엔진 작동 원리
-      </h2>
-
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl mb-4">
-        <h3 className="text-3xl font-bold text-center mb-4 text-yellow-300">
-          3단계 과학적 알고리즘
-        </h3>
-
-        {/* 로직 1 */}
-        <div className="bg-indigo-700 p-4 rounded-2xl mb-3 shadow-2xl">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-black text-indigo-900">
-              1
-            </div>
-            <h4 className="text-2xl font-bold">우선 유도 지역 정의</h4>
-          </div>
-          <div className="bg-white/20 p-4 rounded-xl mb-2">
-            <p className="text-base mb-2">플랫폼 데이터 융합 → <strong className="text-yellow-300">'비인기/저소비' 읍면지역</strong> 과학적 정의</p>
-            <div className="bg-black/30 p-3 rounded-lg font-mono text-sm">
-              <p><strong className="text-green-400">지역별 관광객 현황</strong> (방문객 하위 20%)</p>
-              <p className="text-yellow-300">+</p>
-              <p><strong className="text-blue-400">지역별 매출액</strong> (매출 하위 20%)</p>
-              <p className="text-yellow-300">=</p>
-              <p><strong className="text-pink-400">우선 유도 대상 지역 확정</strong></p>
-            </div>
-          </div>
-        </div>
-
-        {/* 로직 2 */}
-        <div className="bg-purple-700 p-4 rounded-2xl mb-3 shadow-2xl">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-black text-purple-900">
-              2
-            </div>
-            <h4 className="text-2xl font-bold">관광약자 프로필 생성</h4>
-          </div>
-          <div className="bg-white/20 p-4 rounded-xl">
-            <p className="text-base mb-3">약자 유형별 선호 콘텐츠(POI) <strong className="text-yellow-300">데이터로 정의</strong></p>
-            <div className="grid md:grid-cols-3 gap-2">
-              <div className="bg-blue-500 p-3 rounded-lg">
-                <p className="font-bold mb-1 text-sm">지역별 여행 키워드</p>
-                <p className="text-xs">'숲', '오름', '아이와', '체험'</p>
-              </div>
-              <div className="bg-green-500 p-3 rounded-lg">
-                <p className="font-bold mb-1 text-sm">한라산 탐방객</p>
-                <p className="text-xs">저강도 탐방로 선호</p>
-              </div>
-              <div className="bg-pink-500 p-3 rounded-lg">
-                <p className="font-bold mb-1 text-sm">골프장 내장객</p>
-                <p className="text-xs">액티브 시니어 선호</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 로직 3 */}
-        <div className="bg-pink-700 p-4 rounded-2xl shadow-2xl">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-black text-pink-900">
-              3
-            </div>
-            <h4 className="text-2xl font-bold">안심 코스 자동 생성</h4>
-          </div>
-          <div className="bg-white/20 p-4 rounded-xl">
-            <p className="text-base mb-2"><strong className="text-yellow-300">[로직 1] 소외 지역</strong> + <strong className="text-green-300">[로직 2] 약자 선호 POI</strong> = <strong className="text-pink-300">최적 매칭</strong></p>
-            <div className="bg-black/30 p-3 rounded-lg text-sm">
-              <p className="mb-1">• <strong className="text-blue-400">차량분포도</strong> (이전/이후 방문지) 활용</p>
-              <p className="mb-1">• 관광객의 <strong className="text-green-400">자연스러운 이동 동선</strong> 기반</p>
-              <p>• <strong className="text-yellow-400">최적 안심 코스</strong> 자동 생성</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 8: 핵심 기능 1 - 프로파일링
-  <Slide key="8" backgroundColor="bg-gradient-to-br from-blue-50 to-purple-50">
-    <div className="space-y-4">
-      <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">
-        <span className="text-blue-600">👥</span> [기능 1] 스마트 프로파일링
-      </h2>
-
-      <div className="grid md:grid-cols-3 gap-4 mb-4">
-        {/* 액티브 시니어 */}
-        <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-2xl shadow-xl text-white">
-          <div className="text-5xl mb-2 text-center">🚶</div>
-          <h3 className="text-xl font-bold mb-2 text-center">액티브 시니어</h3>
-          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
-            <p className="text-sm font-semibold text-center">65-74세</p>
-          </div>
-          <ul className="space-y-1 text-sm">
-            <li>✓ 걷기와 자연 선호</li>
-            <li>✓ 한적한 오름, 숲길</li>
-            <li>✓ 경치 좋은 카페</li>
-          </ul>
-        </div>
-
-        {/* 케어 시니어 */}
-        <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-4 rounded-2xl shadow-xl text-white">
-          <div className="text-5xl mb-2 text-center">☕</div>
-          <h3 className="text-xl font-bold mb-2 text-center">케어 시니어</h3>
-          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
-            <p className="text-sm font-semibold text-center">75세 이상</p>
-          </div>
-          <ul className="space-y-1 text-sm">
-            <li>✓ 짧은 산책 코스</li>
-            <li>✓ 편안한 카페</li>
-            <li>✓ 휴게 시설 필수</li>
-          </ul>
-        </div>
-
-        {/* 유아 동반 */}
-        <div className="bg-gradient-to-br from-green-500 to-green-700 p-4 rounded-2xl shadow-xl text-white">
-          <div className="text-5xl mb-2 text-center">👨‍👩‍👧</div>
-          <h3 className="text-xl font-bold mb-2 text-center">유아 동반 가족</h3>
-          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
-            <p className="text-sm font-semibold text-center">3-6세 아이</p>
-          </div>
-          <ul className="space-y-1 text-sm">
-            <li>✓ 체험 프로그램</li>
-            <li>✓ 놀이 시설</li>
-            <li>✓ 아이 친화 공간</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-4">
-        {/* 영아 동반 */}
-        <div className="bg-gradient-to-br from-pink-500 to-pink-700 p-4 rounded-2xl shadow-xl text-white">
-          <div className="text-5xl mb-2 text-center">👶</div>
-          <h3 className="text-xl font-bold mb-2 text-center">영아 동반 가족</h3>
-          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
-            <p className="text-sm font-semibold text-center">0-2세 아기</p>
-          </div>
-          <ul className="space-y-1 text-sm">
-            <li>✓ 유모차 접근 가능</li>
-            <li>✓ 수유실 필수</li>
-            <li>✓ 기저귀 교환대</li>
-          </ul>
-        </div>
-
-        {/* 일반 관광객 */}
-        <div className="bg-gradient-to-br from-gray-500 to-gray-700 p-4 rounded-2xl shadow-xl text-white">
-          <div className="text-5xl mb-2 text-center">✈️</div>
-          <h3 className="text-xl font-bold mb-2 text-center">일반 관광객</h3>
-          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
-            <p className="text-sm font-semibold text-center">제약 없음</p>
-          </div>
-          <ul className="space-y-1 text-sm">
-            <li>✓ 다양한 여행 스타일</li>
-            <li>✓ 유명 관광지 포함</li>
-            <li>✓ 유연한 일정</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-2xl text-center">
-        <p className="text-2xl font-black">
-          프로필 선택만으로 <span className="text-yellow-300">AI가 맞춤형 코스 자동 생성</span>
-        </p>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 9: 핵심 기능 2 - 안심 & 상생 내비게이션
-  <Slide key="9" backgroundColor="bg-gradient-to-br from-green-600 via-blue-600 to-purple-700">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">🗺️</span> [기능 2] 안심 & 상생 내비게이션
-      </h2>
-
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl">
-        <h3 className="text-3xl font-bold text-center mb-6 text-yellow-300">
-          일반 내비게이션 vs JejU-Again
-        </h3>
-
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          {/* 일반 내비게이션 */}
-          <div className="bg-red-600 p-6 rounded-2xl shadow-xl">
-            <div className="text-center mb-4">
-              <span className="text-5xl">❌</span>
-              <h4 className="text-2xl font-bold mt-2">일반 내비게이션</h4>
-            </div>
-            <div className="bg-red-700 p-4 rounded-xl space-y-2 text-base">
-              <p className="flex items-center gap-2">
-                <span>⚡</span>
-                <span><strong>최단 시간</strong> 중심</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>🔥</span>
-                <span>유명 관광지 집중</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>👥</span>
-                <span>혼잡도 무관</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>🚫</span>
-                <span>프로필 무시</span>
-              </p>
-            </div>
-          </div>
-
-          {/* JejU-Again */}
-          <div className="bg-green-600 p-6 rounded-2xl shadow-xl">
-            <div className="text-center mb-4">
-              <span className="text-5xl">✅</span>
-              <h4 className="text-2xl font-bold mt-2">JejU-Again</h4>
-            </div>
-            <div className="bg-green-700 p-4 rounded-xl space-y-2 text-base">
-              <p className="flex items-center gap-2">
-                <span>💚</span>
-                <span><strong>가장 편안한 길</strong> 중심</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>🏘️</span>
-                <span>소외 읍면지역 우선</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>🚫</span>
-                <span>혼잡 지역 회피</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>🎯</span>
-                <span>프로필 맞춤 POI</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* 핵심 동작 원리 */}
-        <div className="bg-blue-800 p-6 rounded-2xl">
-          <h4 className="text-2xl font-bold mb-4 text-center text-yellow-300">핵심 동작 원리</h4>
-          <div className="bg-white/20 p-4 rounded-xl text-base leading-relaxed">
-            <p className="mb-3 text-center">
-              사용자가 코스를 선택하면 <strong className="text-yellow-300">[로직 3]</strong>에 따라
-            </p>
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="bg-green-500 px-4 py-3 rounded-xl text-center">
-                <p className="font-bold">소외된 읍면지역</p>
-                <p className="text-sm">안심 POI</p>
-              </div>
-              <span className="text-3xl">+</span>
-              <div className="bg-blue-500 px-4 py-3 rounded-xl text-center">
-                <p className="font-bold">지역 소상공인</p>
-                <p className="text-sm">파트너 상점</p>
-              </div>
-            </div>
-            <p className="text-center">
-              의도적으로 경유 → 동선과 소비를 <strong className="text-green-300">자연스럽게 분산</strong> 💰
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 10: 핵심 기능 3 - 실시간 안심 알림
-  <Slide key="10" backgroundColor="bg-gradient-to-br from-orange-500 via-red-500 to-pink-600">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">🔔</span> [기능 3] 실시간 안심 알림
-      </h2>
-
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl">
-        <h3 className="text-3xl font-bold text-center mb-4 text-yellow-300">
-          능동적 개입 시스템
-        </h3>
-
-        {/* 실시간 데이터 연동 */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          <div className="bg-orange-700 p-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3 text-center">📊</div>
-            <h4 className="text-2xl font-bold mb-3 text-center">관광객 분포도</h4>
-            <div className="bg-orange-800 p-4 rounded-xl text-center">
-              <p className="text-4xl font-bold mb-1">5분</p>
-              <p className="text-base">단위 실시간 업데이트</p>
-            </div>
-          </div>
-
-          <div className="bg-red-700 p-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3 text-center">🚗</div>
-            <h4 className="text-2xl font-bold mb-3 text-center">차량 분포도</h4>
-            <div className="bg-red-800 p-4 rounded-xl text-center">
-              <p className="text-4xl font-bold mb-1">5분</p>
-              <p className="text-base">단위 실시간 업데이트</p>
-            </div>
-          </div>
-        </div>
-
-        {/* 알림 예시 */}
-        <div className="bg-white text-gray-900 p-6 rounded-2xl shadow-xl">
-          <h4 className="text-2xl font-bold mb-4 text-center text-red-600">
-            ⚠️ 실제 알림 예시
-          </h4>
-          <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-400">
-            <div className="space-y-3 text-lg">
-              <p>
-                "계획하신 <strong className="text-red-600">'성산일출봉' 주차장</strong>이
-              </p>
-              <p className="text-center">
-                혼잡도 <span className="text-5xl font-black text-red-600">80%</span>입니다.
-              </p>
-              <p className="mt-4">
-                10분 거리의 <strong className="text-green-600">'섭지코지 숲길'</strong>은
-              </p>
-              <p className="text-center">
-                현재 <span className="text-4xl font-bold text-green-600">'한적'</span>합니다.
-              </p>
-              <div className="mt-6 text-center">
-                <button className="bg-green-600 text-white px-8 py-4 rounded-xl text-xl font-bold shadow-xl hover:bg-green-700">
-                  경로 변경할까요?
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-4 bg-blue-900 p-4 rounded-2xl text-center">
-          <p className="text-2xl font-bold">
-            💡 단순 혼잡도 표시 → <span className="text-yellow-300">능동적 문제 해결</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 11: AI 엔진 - Claude Sonnet 4.0
-  <Slide key="11" backgroundColor="bg-gradient-to-br from-purple-700 via-pink-600 to-red-600">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">🤖</span> AI 맞춤형 코스 생성 엔진
-      </h2>
-
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl">
-        {/* Claude Sonnet 4.0 강조 */}
-        <div className="text-center mb-6">
-          <div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3">🧠</div>
-            <h3 className="text-4xl font-black mb-2">Claude Sonnet 4.0</h3>
-            <p className="text-xl">Anthropic 최신 AI 모델</p>
-          </div>
-        </div>
-
-        {/* AI 능력 3가지 */}
-        <div className="grid md:grid-cols-3 gap-4 mb-6">
-          <div className="bg-blue-700 p-6 rounded-2xl shadow-xl text-center">
-            <div className="text-5xl mb-3">📊</div>
-            <h4 className="text-2xl font-bold mb-2">데이터 분석</h4>
-            <p className="text-base">
-              혼잡도, 프로필, 선호도<br/>
-              <strong className="text-blue-300">종합 분석</strong>
-            </p>
-          </div>
-
-          <div className="bg-green-700 p-6 rounded-2xl shadow-xl text-center">
-            <div className="text-5xl mb-3">🎯</div>
-            <h4 className="text-2xl font-bold mb-2">최적 매칭</h4>
-            <p className="text-base">
-              사용자 프로필에<br/>
-              <strong className="text-green-300">완벽히 맞춤</strong>
-            </p>
-          </div>
-
-          <div className="bg-purple-700 p-6 rounded-2xl shadow-xl text-center">
-            <div className="text-5xl mb-3">💡</div>
-            <h4 className="text-2xl font-bold mb-2">이유 설명</h4>
-            <p className="text-base">
-              각 장소 추천<br/>
-              <strong className="text-purple-300">근거 제시</strong>
-            </p>
-          </div>
-        </div>
-
-        {/* AI 프롬프트 설계 */}
-        <div className="bg-gray-900 p-6 rounded-2xl">
-          <h4 className="text-2xl font-bold mb-4 text-yellow-300">AI 프롬프트 핵심 설계</h4>
-          <div className="bg-black/50 p-4 rounded-xl space-y-2 text-base font-mono">
-            <p className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>혼잡도 <strong className="text-red-400">CROWDED/NORMAL</strong> 지역 제외 (필수)</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>지역 다양성 보장 (<strong className="text-blue-400">제주시/서귀포/동부/서부</strong>)</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>로컬 상점 <strong className="text-yellow-400">1곳 이상</strong> 포함</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>프로필별 맞춤 <strong className="text-purple-400">사유 생성</strong></span>
-            </p>
-            <p className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span><strong className="text-green-400">JSON</strong> 구조화 응답</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 12: 데이터 활용 - 제주관광 빅데이터
-  <Slide key="12" backgroundColor="bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-600">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">📊</span> 실제 데이터 활용
-      </h2>
-
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl">
-        <div className="text-center mb-6">
-          <h3 className="text-3xl font-bold mb-2 text-yellow-300">
-            제주관광 빅데이터 서비스 플랫폼
-          </h3>
-          <p className="text-xl">data.ijto.or.kr</p>
-        </div>
-
-        {/* 데이터 카테고리 */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          <div className="bg-blue-700 p-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3 text-center">✈️</div>
-            <h4 className="text-2xl font-bold mb-4 text-center">입도·이동 통계</h4>
-            <ul className="space-y-2 text-base">
-              <li>✓ 내국인 입도 통계 (2019-2025)</li>
-              <li>✓ 외국인 입도 통계 (2019-2025)</li>
-              <li>✓ 지역별 관광객 현황 (블록별)</li>
-              <li>✓ 지역별 여행 키워드 (비짓제주)</li>
-            </ul>
-          </div>
-
-          <div className="bg-green-700 p-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3 text-center">💳</div>
-            <h4 className="text-2xl font-bold mb-4 text-center">생산·소비 통계</h4>
-            <ul className="space-y-2 text-base">
-              <li>✓ 월간 제주 소비 동향 (2013-2025)</li>
-              <li>✓ 업종별 소비 분석 (내/외국인)</li>
-              <li>✓ 지역별 매출액 증감률</li>
-              <li>✓ 소외 지역 상권 파악</li>
-            </ul>
-          </div>
-
-          <div className="bg-purple-700 p-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3 text-center">📈</div>
-            <h4 className="text-2xl font-bold mb-4 text-center">관광동향 보고서</h4>
-            <ul className="space-y-2 text-base">
-              <li>✓ 한라산 탐방객 통계</li>
-              <li>✓ 제주 운항편 수 및 여객수</li>
-              <li>✓ 렌터카 가동률</li>
-              <li>✓ 섬 속의 섬 이동객</li>
-            </ul>
-          </div>
-
-          <div className="bg-orange-700 p-6 rounded-2xl shadow-xl">
-            <div className="text-5xl mb-3 text-center">🎯</div>
-            <h4 className="text-2xl font-bold mb-4 text-center">실제 활용</h4>
-            <div className="space-y-3">
-              <div className="bg-orange-800 p-3 rounded-xl">
-                <p className="text-xl font-bold mb-1">2025년 8월</p>
-                <p className="text-base">실제 다운로드 데이터</p>
-              </div>
-              <div className="bg-orange-800 p-3 rounded-xl">
-                <p className="text-base">CSV → JSON 자동 변환</p>
-              </div>
-              <div className="bg-orange-800 p-3 rounded-xl">
-                <p className="text-base">투명한 출처 공개</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-yellow-500 text-gray-900 p-6 rounded-2xl text-center">
-          <p className="text-3xl font-black">
-            📌 검증 가능한 공식 데이터로 신뢰성 확보
-          </p>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 13: 기대효과 - 3가지 임팩트
-  <Slide key="13" backgroundColor="bg-gradient-to-br from-green-600 via-blue-600 to-purple-600">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">🎉</span> 기대효과
-      </h2>
-
-      {/* 기대효과 1 */}
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl mb-4">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-4xl font-black text-blue-900">
-            1
-          </div>
-          <h3 className="text-3xl font-bold">對 관광객</h3>
-        </div>
-        <div className="bg-blue-700 p-6 rounded-2xl">
-          <div className="text-center mb-4">
-            <p className="text-2xl mb-3">'아이/부모님 모시고 가기 힘든 제주' →</p>
-            <p className="text-4xl font-black text-yellow-300 mb-4">
-              '가장 편안하고 안전한 여행지'
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-blue-800 p-4 rounded-xl text-center">
-              <p className="text-5xl font-bold mb-1">128만 명</p>
-              <p className="text-base">거대 시장 만족도 극대화</p>
-            </div>
-            <div className="bg-green-700 p-4 rounded-xl text-center">
-              <p className="text-4xl font-bold mb-1">Again ↑</p>
-              <p className="text-base">재방문 의사 증대</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 기대효과 2 */}
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl mb-4">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-4xl font-black text-green-900">
-            2
-          </div>
-          <h3 className="text-3xl font-bold">對 지역경제</h3>
-        </div>
-        <div className="bg-green-700 p-6 rounded-2xl">
-          <p className="text-2xl mb-4 text-center">
-            특정 핫플레이스 집중 → <strong className="text-yellow-300">읍면지역 소상공인 분산</strong>
-          </p>
-          <div className="flex items-center justify-center gap-4 text-xl">
-            <div className="bg-red-600 px-6 py-4 rounded-xl text-center">
-              <p className="text-3xl mb-1">⚡</p>
-              <p>동문시장<br/>과밀화</p>
-            </div>
-            <div className="text-5xl">→</div>
-            <div className="bg-green-800 px-6 py-4 rounded-xl text-center">
-              <p className="text-3xl mb-1">💰</p>
-              <p>읍면 지역<br/>상생 효과</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 기대효과 3 */}
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-4xl font-black text-purple-900">
-            3
-          </div>
-          <h3 className="text-3xl font-bold">對 제주정책</h3>
-        </div>
-        <div className="bg-purple-700 p-6 rounded-2xl">
-          <div className="text-center text-2xl mb-4">
-            <p className="mb-3">
-              <strong className="text-red-300">오버투어리즘</strong> +
-              <strong className="text-blue-300"> 언더투어리즘</strong> +
-              <strong className="text-orange-300"> 관광약자 지원</strong>
-            </p>
-            <div className="text-5xl my-4">↓</div>
-            <p className="text-4xl font-black text-yellow-300">
-              단일 솔루션으로 동시 해결
-            </p>
-          </div>
-          <div className="bg-purple-800 p-4 rounded-xl mt-4 text-center">
-            <p className="text-2xl font-bold">
-              데이터 기반 정책의 <span className="text-green-300">전국적 모범 사례</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 14: 기술 스택
-  <Slide key="14" backgroundColor="bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">⚡</span> 기술 스택
-      </h2>
-
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="bg-gradient-to-br from-blue-700 to-blue-900 p-6 rounded-2xl shadow-xl">
-          <div className="text-5xl mb-3 text-center">⚛️</div>
-          <h3 className="text-2xl font-bold mb-4 text-center">프론트엔드</h3>
-          <div className="space-y-2 text-base">
-            <div className="bg-blue-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">▲</span>
-              <span><strong>Next.js 16</strong> (App Router)</span>
-            </div>
-            <div className="bg-blue-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">TS</span>
-              <span><strong>TypeScript</strong> (타입 안정성)</span>
-            </div>
-            <div className="bg-blue-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">🎨</span>
-              <span><strong>Tailwind CSS v4</strong></span>
-            </div>
-            <div className="bg-blue-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">🎬</span>
-              <span><strong>Framer Motion</strong></span>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-br from-purple-700 to-purple-900 p-6 rounded-2xl shadow-xl">
-          <div className="text-5xl mb-3 text-center">🤖</div>
-          <h3 className="text-2xl font-bold mb-4 text-center">AI & 데이터</h3>
-          <div className="space-y-2 text-base">
-            <div className="bg-purple-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">🧠</span>
-              <span><strong>Claude Sonnet 4.0</strong></span>
-            </div>
-            <div className="bg-purple-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">📊</span>
-              <span><strong>제주관광 빅데이터</strong></span>
-            </div>
-            <div className="bg-purple-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">🗺️</span>
-              <span><strong>한국관광공사 API</strong></span>
-            </div>
-            <div className="bg-purple-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">📄</span>
-              <span><strong>CSV 파싱</strong></span>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-br from-green-700 to-green-900 p-6 rounded-2xl shadow-xl">
-          <div className="text-5xl mb-3 text-center">🗺️</div>
-          <h3 className="text-2xl font-bold mb-4 text-center">지도 & API</h3>
-          <div className="space-y-2 text-base">
-            <div className="bg-green-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">N</span>
-              <span><strong>Naver Maps API v3</strong></span>
-            </div>
-            <div className="bg-green-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">🧭</span>
-              <span><strong>Directions API</strong></span>
-            </div>
-            <div className="bg-green-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">📡</span>
-              <span><strong>실시간 혼잡도</strong></span>
-            </div>
-            <div className="bg-green-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">📑</span>
-              <span><strong>Google Sheets API</strong></span>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-br from-orange-700 to-orange-900 p-6 rounded-2xl shadow-xl">
-          <div className="text-5xl mb-3 text-center">🚀</div>
-          <h3 className="text-2xl font-bold mb-4 text-center">배포 & 인프라</h3>
-          <div className="space-y-2 text-base">
-            <div className="bg-orange-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">▲</span>
-              <span><strong>Vercel</strong> (자동 배포)</span>
-            </div>
-            <div className="bg-orange-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">📦</span>
-              <span><strong>GitHub</strong> (버전 관리)</span>
-            </div>
-            <div className="bg-orange-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">⚡</span>
-              <span><strong>Edge Functions</strong></span>
-            </div>
-            <div className="bg-orange-800 p-3 rounded-xl flex items-center gap-2">
-              <span className="text-2xl">🌐</span>
-              <span><strong>CDN</strong> (글로벌)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 rounded-2xl text-center">
-        <p className="text-3xl font-black">
-          프로덕션 레디 <span className="text-yellow-300">최신 기술 스택</span>
-        </p>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 15: 활용 제안 - 필수 요청
-  <Slide key="15" backgroundColor="bg-gradient-to-br from-red-600 via-orange-600 to-yellow-500">
-    <div className="space-y-6 text-white">
-      <h2 className="text-5xl font-black mb-6 text-center">
-        <span className="text-yellow-300">💡</span> 활용 제안
-      </h2>
-
-      {/* 필수 제안 */}
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl mb-4">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-5xl">
-            🔴
-          </div>
-          <h3 className="text-4xl font-black">
-            [필수 제안]<br/>실시간 데이터 API 공개
-          </h3>
-        </div>
-
-        <div className="bg-red-700 p-6 rounded-2xl mb-4">
-          <h4 className="text-2xl font-bold mb-4 text-yellow-300">핵심 기능 구현을 위해 필수</h4>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-red-800 p-4 rounded-xl">
-              <p className="text-3xl font-bold mb-2">📊</p>
-              <p className="text-xl font-bold mb-1">관광객 분포도</p>
-              <p className="text-base">5분 단위 실시간</p>
-            </div>
-            <div className="bg-red-800 p-4 rounded-xl">
-              <p className="text-3xl font-bold mb-2">🚗</p>
-              <p className="text-xl font-bold mb-1">차량 분포도</p>
-              <p className="text-base">5분 단위 실시간</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-orange-700 p-6 rounded-2xl">
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <p className="text-xl font-bold mb-2 text-yellow-300">현재 상황</p>
-              <ul className="space-y-1 text-base">
-                <li>❌ 데이터 다운로드 불가</li>
-                <li>❌ 비짓제주 시각화만 가능</li>
-                <li>❌ API 엔드포인트 미제공</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xl font-bold mb-2 text-yellow-300">요청 사항</p>
-              <ul className="space-y-1 text-base">
-                <li className="flex items-center gap-2">
-                  <span className="text-2xl">✅</span>
-                  <span><strong>API 엔드포인트 공개</strong></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-2xl">✅</span>
-                  <span><strong>또는 활용 승인</strong></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 선택 제안 */}
-      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-5xl">
-            🔵
-          </div>
-          <h3 className="text-4xl font-black">
-            [선택 제안]<br/>무장애 관광 데이터 통합
-          </h3>
-        </div>
-
-        <div className="bg-blue-700 p-6 rounded-2xl">
-          <p className="text-xl mb-4">
-            <strong>경험적 접근성</strong> + <strong className="text-green-300">물리적 접근성</strong> = 완벽한 서비스
-          </p>
-          <div className="grid md:grid-cols-3 gap-3 text-base">
-            <div className="bg-blue-800 p-4 rounded-xl text-center">
-              <p className="text-3xl mb-1">♿</p>
-              <p>휠체어 경사로</p>
-            </div>
-            <div className="bg-blue-800 p-4 rounded-xl text-center">
-              <p className="text-3xl mb-1">🚼</p>
-              <p>수유실</p>
-            </div>
-            <div className="bg-blue-800 p-4 rounded-xl text-center">
-              <p className="text-3xl mb-1">🅿️</p>
-              <p>장애인 주차</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Slide>,
-
-  // Slide 16: 마무리 - CTA
-  <Slide key="16" backgroundColor="bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900">
-    <div className="text-center text-white space-y-12">
-      <div className="text-8xl mb-8 animate-pulse">🏝️</div>
-
-      <h2 className="text-7xl font-black mb-8 bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
-        JejU-Again
-      </h2>
-
-      <div className="bg-white/10 backdrop-blur-xl p-12 rounded-3xl mb-10">
-        <p className="text-5xl font-bold mb-8 leading-tight">
-          "가장 빠른 길이 아닌,<br/>
-          <span className="text-yellow-300">가장 편안한 길</span>"
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-        <div className="bg-white/20 backdrop-blur-md p-10 rounded-3xl transform hover:scale-105 transition-transform">
-          <div className="bg-white p-8 rounded-2xl mb-6">
-            <div className="w-56 h-56 mx-auto bg-gray-200 flex items-center justify-center text-gray-600 text-lg">
-              QR Code<br/>jeju-again.vercel.app
-            </div>
-          </div>
-          <p className="text-3xl font-bold mb-3">🚀 프로토타입</p>
-          <p className="text-xl text-blue-200">jeju-again.vercel.app</p>
-        </div>
-
-        <div className="bg-white/20 backdrop-blur-md p-10 rounded-3xl transform hover:scale-105 transition-transform">
-          <div className="bg-white p-8 rounded-2xl mb-6">
-            <div className="w-56 h-56 mx-auto bg-gray-200 flex items-center justify-center text-gray-600 text-lg">
-              QR Code<br/>GitHub
-            </div>
-          </div>
-          <p className="text-3xl font-bold mb-3">📦 GitHub</p>
-          <p className="text-xl text-blue-200">github.com/yonghwan1106<br/>/jeju-again</p>
-        </div>
-      </div>
-
+      {/* Bottom section */}
       <div className="space-y-6">
-        <div className="bg-white/20 backdrop-blur-md px-12 py-6 rounded-2xl inline-block">
-          <p className="text-3xl font-semibold">📧 sanoramyun8@gmail.com</p>
+        {/* Tagline with marker highlight */}
+        <div className="text-left">
+          <p className="text-4xl font-light text-[#1A1A1A]">
+            가장 빠른 길이 아닌,
+          </p>
+          <MarkerHighlight className="text-4xl font-bold text-[#1A1A1A]" style={{ color: '#F7F052' }}>
+            가장 편안한 길
+          </MarkerHighlight>
+          <WobblyUnderline className="mt-2 text-[#FF6B35]" />
         </div>
-        <div className="bg-white/20 backdrop-blur-md px-12 py-6 rounded-2xl inline-block ml-4">
-          <p className="text-3xl font-semibold">📱 010-7939-3123</p>
+
+        {/* Contest badge */}
+        <div className="inline-block">
+          <div className="border-4 border-[#FF6B35] bg-[#FF6B35] px-8 py-4 text-white text-xl font-bold shadow-[6px_6px_0px] shadow-black/30">
+            2025 제주관광 데이터 활용 공모전 출품작
+          </div>
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 2: Problem Statement - Diagonal Collision
+  <Slide key="2" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-8">
+      {/* Title banner */}
+      <div className="relative mb-8">
+        <h2 className="text-6xl font-black text-[#1A1A1A]">
+          <span className="text-4xl">⚠️</span> 제주 관광의 민낯
+        </h2>
+        <div className="border-b-4 border-[#1A1A1A] w-full mt-4" />
+      </div>
+
+      {/* Two angled boxes with VS */}
+      <div className="grid grid-cols-2 gap-12 items-center relative">
+        {/* Left box - tilted left */}
+        <div className="transform rotate-3">
+          <BrutalistBox className="bg-white p-8" borderColor="border-[#E63946]" shadowColor="shadow-[#E63946]/40">
+            <div className="text-center mb-6">
+              <div className="text-8xl font-black text-[#E63946] mb-2" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+                90%
+              </div>
+              <div className="text-3xl font-bold text-[#1A1A1A]">CROWDED</div>
+            </div>
+            <div className="space-y-3 text-[#1A1A1A] text-xl">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🏖️</span>
+                <span>관광객 과밀화</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">😫</span>
+                <span>만족도 저하</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">💢</span>
+                <span>주민 피로</span>
+              </div>
+            </div>
+          </BrutalistBox>
+        </div>
+
+        {/* VS symbol - hand-drawn style */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+          <div className="text-6xl font-black text-[#F7F052] bg-[#1A1A1A] px-6 py-4 rotate-12 border-4 border-[#F7F052]">
+            ⚡ VS ⚡
+          </div>
+        </div>
+
+        {/* Right box - tilted right */}
+        <div className="transform -rotate-3">
+          <BrutalistBox className="bg-white p-8" borderColor="border-[#00B4D8]" shadowColor="shadow-[#00B4D8]/40">
+            <div className="text-center mb-6">
+              <div className="text-8xl font-black text-[#00B4D8] mb-2" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+                10%
+              </div>
+              <div className="text-3xl font-bold text-[#1A1A1A]">NEGLECTED</div>
+            </div>
+            <div className="space-y-3 text-[#1A1A1A] text-xl">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🏘️</span>
+                <span>상권 침체</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">📉</span>
+                <span>수익 불균형</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🚫</span>
+                <span>발전 저해</span>
+              </div>
+            </div>
+          </BrutalistBox>
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-16 py-8 rounded-3xl inline-block shadow-2xl">
-        <p className="text-4xl font-black">2025 제주관광 데이터 활용 공모전 출품작</p>
+      {/* Bottom question - speech bubble style */}
+      <div className="text-center mt-8">
+        <div className="inline-block relative">
+          <div className="bg-[#1A1A1A] text-white px-12 py-6 text-3xl font-bold border-4 border-[#1A1A1A] relative">
+            "이 두 문제를 <span className="text-[#F7F052]">동시에</span> 해결한다면?"
+            <div className="absolute -bottom-4 left-12 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-[#1A1A1A]" />
+          </div>
+          <ChunkyArrow className="absolute -right-24 top-1/2 w-20 h-10 text-[#FF6B35]" direction="right" />
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 3: 86% - Brutal Data Visualization
+  <Slide key="3" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-6">
+      {/* Title */}
+      <div className="relative">
+        <h2 className="text-5xl font-black text-[#1A1A1A] mb-6">
+          <span className="text-4xl">👥</span> 정책의 사각지대를 발견하다
+        </h2>
+        <div className="border-b-4 border-[#1A1A1A] w-full" />
+      </div>
+
+      {/* Massive 86% */}
+      <div className="relative flex justify-center my-8">
+        <BrutalistBox className="bg-white p-12 text-center" borderColor="border-[#FF6B35]" shadowColor="shadow-black/50">
+          <div className="relative">
+            <div className="text-[12rem] font-black text-[#1A1A1A] leading-none mb-4" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              86%
+            </div>
+            <ScribbleCircle className="absolute inset-0 w-full h-full text-[#FF6B35]" />
+            <div className="border-t-4 border-[#1A1A1A] w-3/4 mx-auto my-6" style={{ borderStyle: 'dashed' }} />
+            <div className="text-4xl font-bold text-[#1A1A1A] mb-2">148만 명</div>
+            <div className="text-3xl font-bold text-[#1A1A1A]">관광약자</div>
+          </div>
+        </BrutalistBox>
+        {/* Exclamation marks */}
+        <ExclamationDoodle className="absolute -right-12 top-0 w-8 h-20 text-[#FF6B35]" />
+        <ExclamationDoodle className="absolute -left-12 top-12 w-8 h-20 text-[#E63946]" />
+      </div>
+
+      {/* Data bars */}
+      <div className="space-y-4 max-w-4xl mx-auto">
+        <div className="flex items-center gap-4">
+          <div className="flex-1 bg-[#FF6B35] h-12 flex items-center px-4 border-4 border-[#1A1A1A]" style={{ width: '51%' }}>
+            <span className="text-white font-bold text-xl">■■■■■■■■■■</span>
+          </div>
+          <span className="text-2xl font-black w-32 text-[#1A1A1A]" style={{ fontFamily: 'JetBrains Mono, monospace' }}>51% 시니어</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="flex-1 bg-[#FF6B35] h-12 flex items-center px-4 border-4 border-[#1A1A1A]" style={{ width: '35%' }}>
+            <span className="text-white font-bold text-xl">■■■■■■■</span>
+          </div>
+          <span className="text-2xl font-black w-32 text-[#1A1A1A]" style={{ fontFamily: 'JetBrains Mono, monospace' }}>35% 영유아</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="flex-1 bg-gray-300 h-12 flex items-center px-4 border-4 border-[#1A1A1A]" style={{ width: '13.5%' }}>
+            <span className="text-[#1A1A1A] font-bold text-xl">■■</span>
+          </div>
+          <span className="text-2xl font-black w-32 text-gray-500" style={{ fontFamily: 'JetBrains Mono, monospace' }}>13.5% 기존</span>
+        </div>
+      </div>
+
+      {/* Hand-written annotation */}
+      <div className="relative text-center">
+        <div className="inline-block">
+          <p className="text-3xl font-bold text-[#E63946] transform -rotate-3" style={{ fontFamily: 'Caveat, cursive' }}>
+            "6.5배 더 큰 시장!"
+          </p>
+          <ChunkyArrow className="inline-block w-16 h-8 ml-4 text-[#E63946]" direction="up" />
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 4: Real Problem - Battle Card Style
+  <Slide key="4" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-8">
+      {/* Title */}
+      <h2 className="text-6xl font-black text-[#1A1A1A] text-center mb-6">
+        <span className="text-4xl">💥</span> 진짜 불편함은 무엇인가?
+      </h2>
+
+      {/* Comparison cards */}
+      <div className="grid grid-cols-2 gap-12 items-center relative">
+        {/* Left card - existing policy */}
+        <div className="transform -rotate-2">
+          <div className="border-4 border-[#E63946] bg-red-50 p-8">
+            <div className="flex justify-between items-start mb-6">
+              <h3 className="text-3xl font-black text-[#1A1A1A]">❌ 기존 정책</h3>
+              <ScribbleX className="w-16 h-16 text-[#E63946]" />
+            </div>
+            <div className="space-y-4 text-xl text-[#1A1A1A]">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">•</span>
+                <span>물리적 접근성<br/><span className="text-base text-gray-600">(휠체어, 경사로)</span></span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">•</span>
+                <span><span className="font-bold">13.5%</span> 시장</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">•</span>
+                <span>시설 개선 중심</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right card - real problem */}
+        <div className="transform rotate-2">
+          <BrutalistBox className="bg-green-50 p-8" borderColor="border-[#06FFA5]" shadowColor="shadow-[#06FFA5]/40">
+            <div className="flex justify-between items-start mb-6">
+              <h3 className="text-3xl font-black text-[#1A1A1A]">✅ 진짜 문제</h3>
+              <CheckmarkScribble className="w-16 h-16 text-[#06FFA5]" />
+            </div>
+            <div className="space-y-4 text-xl text-[#1A1A1A]">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">•</span>
+                <span>경험적 장벽<br/><span className="text-base text-gray-600">(혼잡, 소음)</span></span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">•</span>
+                <span><span className="font-bold text-[#06FFA5]">86%</span> 시장</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">•</span>
+                <span>데이터 해결</span>
+              </div>
+            </div>
+          </BrutalistBox>
+        </div>
+      </div>
+
+      {/* Pain points as stamps */}
+      <div className="flex justify-center gap-6 flex-wrap">
+        {[
+          { emoji: '😫', text: '혼잡' },
+          { emoji: '🔊', text: '소음' },
+          { emoji: '⏰', text: '대기' },
+          { emoji: '❓', text: '불예측' }
+        ].map((pain, i) => (
+          <div key={i} className="border-3 border-[#1A1A1A] bg-white px-6 py-3 text-center shadow-[4px_4px_0px] shadow-black/30 transform hover:rotate-0 transition-transform" style={{ rotate: `${(i % 2 === 0 ? -2 : 2)}deg` }}>
+            <div className="text-3xl mb-1">{pain.emoji}</div>
+            <div className="text-xl font-bold text-[#1A1A1A]">{pain.text}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 5: Eureka - Lightbulb Explosion
+  <Slide key="5" backgroundColor="bg-[#F7F052]">
+    <div className="h-full flex flex-col justify-center items-center space-y-8">
+      {/* Lightbulb explosion */}
+      <div className="relative">
+        <div className="text-9xl">💡</div>
+        <StarBurst className="absolute -top-8 -left-8 w-32 h-32 text-[#FF6B35] opacity-80" />
+        <StarBurst className="absolute -top-8 -right-8 w-28 h-28 text-[#E63946] opacity-70" />
+        <StarBurst className="absolute -bottom-4 left-0 w-24 h-24 text-[#00B4D8] opacity-60" />
+      </div>
+
+      {/* EUREKA text */}
+      <div className="text-9xl font-black text-[#1A1A1A] transform -rotate-3">
+        EUREKA!
+      </div>
+
+      {/* Data insight box */}
+      <BrutalistBox className="bg-[#FFFEF2] p-10 max-w-3xl" borderColor="border-[#1A1A1A]">
+        <div className="text-3xl font-bold text-[#1A1A1A] text-center mb-6">
+          86% 관광약자 선호:
+        </div>
+        <div className="space-y-4 text-2xl text-[#1A1A1A]">
+          <div className="flex items-center justify-center gap-4">
+            <span className="text-3xl">🌲</span>
+            <span className="font-bold">숲·오름</span>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <span className="text-3xl">🏘️</span>
+            <span className="font-bold">읍면 지역</span>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <span className="text-3xl">🎨</span>
+            <span className="font-bold">체험 콘텐츠</span>
+          </div>
+        </div>
+        <div className="border-t-4 border-[#1A1A1A] my-6" />
+        <div className="text-4xl font-black text-center text-[#1A1A1A]">
+          = 언더투어리즘 지역!
+        </div>
+      </BrutalistBox>
+
+      {/* Equation at bottom */}
+      <div className="flex items-center justify-center gap-6 text-2xl font-bold">
+        <div className="bg-[#FF6B35] text-white px-6 py-3 border-4 border-[#1A1A1A]">
+          관광약자 선호
+        </div>
+        <div className="text-5xl font-black text-[#1A1A1A]">＋</div>
+        <div className="bg-[#00B4D8] text-white px-6 py-3 border-4 border-[#1A1A1A]">
+          소외 지역
+        </div>
+        <div className="text-5xl font-black text-[#1A1A1A]">=</div>
+        <div className="bg-[#06FFA5] text-[#1A1A1A] px-6 py-3 border-4 border-[#1A1A1A]">
+          완벽한 매칭
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 6: Differentiation - Tournament Bracket
+  <Slide key="6" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-6">
+      {/* Title */}
+      <h2 className="text-6xl font-black text-[#1A1A1A] text-center mb-8">
+        <span className="text-5xl">🆚</span> 왜 우리는 다른가?
+      </h2>
+
+      {/* Battle cards */}
+      <div className="space-y-6 max-w-4xl mx-auto">
+        {/* Card 1 */}
+        <BrutalistBox className="bg-white p-6" borderColor="border-[#1A1A1A]">
+          <div className="border-b-3 border-[#1A1A1A] pb-3 mb-4">
+            <h3 className="text-2xl font-black text-[#1A1A1A]">vs 비짓제주 실시간혼잡도</h3>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <div className="text-xl font-bold text-[#E63946]">THEM:</div>
+              <div className="text-lg text-[#1A1A1A]">"여기 혼잡함" →<br/><span className="text-base text-gray-600">(정보만 제공)</span></div>
+            </div>
+            <div className="space-y-2 relative">
+              <div className="text-xl font-bold text-[#06FFA5]">US:</div>
+              <div className="text-lg text-[#1A1A1A]">"B 목장으로 변경" →<br/><span className="text-base font-bold">(문제 해결)</span></div>
+              <div className="absolute -right-8 top-0 bg-[#F7F052] text-[#1A1A1A] px-3 py-1 border-2 border-[#1A1A1A] font-black rotate-12">
+                WIN!
+              </div>
+            </div>
+          </div>
+        </BrutalistBox>
+
+        {/* Card 2 */}
+        <BrutalistBox className="bg-white p-6" borderColor="border-[#1A1A1A]">
+          <div className="border-b-3 border-[#1A1A1A] pb-3 mb-4">
+            <h3 className="text-2xl font-black text-[#1A1A1A]">vs 이지제주 / 휠내비길</h3>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <div className="text-xl font-bold text-[#E63946]">THEM:</div>
+              <div className="text-lg text-[#1A1A1A]">13.5% 시장<br/><span className="text-base text-gray-600">(무장애)</span></div>
+            </div>
+            <div className="space-y-2 relative">
+              <div className="text-xl font-bold text-[#06FFA5]">US:</div>
+              <div className="text-lg text-[#1A1A1A]">86% 시장<br/><span className="text-base font-bold">(시니어+영유아)</span></div>
+              <div className="absolute -right-8 top-0 bg-[#F7F052] text-[#1A1A1A] px-3 py-1 border-2 border-[#1A1A1A] font-black rotate-12">
+                WIN!
+              </div>
+            </div>
+          </div>
+        </BrutalistBox>
+      </div>
+
+      {/* Bottom highlight */}
+      <div className="text-center">
+        <div className="inline-block bg-[#1A1A1A] text-white px-12 py-6 border-4 border-[#1A1A1A] shadow-[8px_8px_0px] shadow-[#FF6B35]">
+          <div className="text-4xl font-black">6.5배 더 큰 시장</div>
+          <div className="text-2xl font-bold mt-2">+ 능동적 해결</div>
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 7: Data Engine - Circuit Board
+  <Slide key="7" backgroundColor="bg-[#1A1A1A]">
+    <div className="h-full flex flex-col justify-center space-y-8">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-white text-center mb-6">
+        <span className="text-4xl">⚙️</span> 데이터 엔진 작동 원리
+      </h2>
+
+      {/* Three step boxes - stair step */}
+      <div className="flex flex-col items-center space-y-6 relative">
+        {/* Step 1 */}
+        <div className="relative" style={{ marginLeft: '-200px' }}>
+          <BrutalistBox className="bg-[#FFFEF2] p-8 w-80" borderColor="border-[#E63946]">
+            <h3 className="text-3xl font-black text-[#1A1A1A] mb-4" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              ① 지역 정의
+            </h3>
+            <div className="space-y-2 text-lg text-[#1A1A1A]">
+              <div>• 방문객 하위 20%</div>
+              <div>• 매출 하위 20%</div>
+            </div>
+          </BrutalistBox>
+          <ChunkyArrow className="absolute -right-12 top-1/2 w-16 h-8 text-[#F7F052]" direction="right" />
+        </div>
+
+        {/* Step 2 */}
+        <div className="relative">
+          <BrutalistBox className="bg-[#FFFEF2] p-8 w-80" borderColor="border-[#FF6B35]">
+            <h3 className="text-3xl font-black text-[#1A1A1A] mb-4" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              ② 프로필 생성
+            </h3>
+            <div className="space-y-2 text-lg text-[#1A1A1A]">
+              <div>• 선호 분석</div>
+              <div>• 키워드 매칭</div>
+            </div>
+          </BrutalistBox>
+          <ChunkyArrow className="absolute -right-12 top-1/2 w-16 h-8 text-[#F7F052]" direction="right" />
+        </div>
+
+        {/* Step 3 */}
+        <div className="relative" style={{ marginLeft: '200px' }}>
+          <BrutalistBox className="bg-[#FFFEF2] p-8 w-80" borderColor="border-[#06FFA5]">
+            <h3 className="text-3xl font-black text-[#1A1A1A] mb-4" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              ③ 코스 생성
+            </h3>
+            <div className="space-y-2 text-lg text-[#1A1A1A]">
+              <div>• 자동 매칭</div>
+              <div>• 안심 루트</div>
+            </div>
+          </BrutalistBox>
+        </div>
+      </div>
+
+      {/* Code block at bottom */}
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-[#2A2A2A] border-4 border-[#06FFA5] p-6 text-[#06FFA5]" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+          <div className="text-xl space-y-1">
+            <div>$ node generate.js</div>
+            <div className="text-white">&gt; 소외지역 + 약자선호</div>
+            <div className="text-[#F7F052]">&gt; = 최적 안심 코스 ✓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 8: Profiling - Trading Cards with Screenshot
+  <Slide key="8" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-6">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-[#1A1A1A] text-center mb-4">
+        <span className="text-4xl">👥</span> [기능 1] 스마트 프로파일링
+      </h2>
+
+      {/* 5 Profile cards - fanned */}
+      <div className="flex justify-center items-end gap-4 mb-6">
+        {[
+          { emoji: '🚶', title: 'ACTIVE', subtitle: 'SENIOR', color: 'border-[#00B4D8]' },
+          { emoji: '☕', title: 'CARE', subtitle: 'SENIOR', color: 'border-[#FF6B35]' },
+          { emoji: '👨‍👩‍👧', title: 'TODDLER', subtitle: 'FAMILY', color: 'border-[#06FFA5]' },
+          { emoji: '👶', title: 'INFANT', subtitle: 'FAMILY', color: 'border-[#F7F052]' },
+          { emoji: '✈️', title: 'GENERAL', subtitle: 'TOURIST', color: 'border-[#1A1A1A]' }
+        ].map((profile, i) => (
+          <div
+            key={i}
+            className={`bg-white ${profile.color} border-4 p-4 w-32 shadow-[4px_4px_0px] shadow-black/30 transform hover:scale-110 transition-transform`}
+            style={{ rotate: `${(i - 2) * 3}deg`, marginTop: `${Math.abs(i - 2) * 10}px` }}
+          >
+            <div className="text-4xl text-center mb-2">{profile.emoji}</div>
+            <div className="text-center">
+              <div className="text-sm font-black text-[#1A1A1A]">{profile.title}</div>
+              <div className="text-xs font-bold text-gray-600">{profile.subtitle}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Screenshot */}
+      <div className="relative mx-auto transform -rotate-1">
+        <BrutalistBox className="bg-white p-2 max-w-3xl" borderColor="border-[#1A1A1A]">
+          <Image
+            src="/screenshots/jeju-again-homepage-hero.png"
+            alt="Profile Selection Interface"
+            width={800}
+            height={450}
+            className="w-full h-auto"
+          />
+        </BrutalistBox>
+        <div className="absolute -bottom-6 -right-6 bg-[#F7F052] text-[#1A1A1A] px-4 py-2 border-3 border-[#1A1A1A] font-bold text-sm rotate-6">
+          실제 화면 →
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 9: Navigation Feature - Road Map with Screenshot
+  <Slide key="9" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-6">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-[#1A1A1A] text-center mb-6">
+        <span className="text-4xl">🗺️</span> [기능 2] 안심 & 상생 내비게이션
+      </h2>
+
+      {/* Comparison - side by side */}
+      <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Left - General Nav */}
+        <div className="border-4 border-[#E63946] bg-red-50 p-6">
+          <h3 className="text-2xl font-black text-[#1A1A1A] mb-4 border-b-3 border-[#E63946] pb-2">
+            일반 내비게이션
+          </h3>
+          <div className="space-y-3 text-xl text-[#1A1A1A]">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">⚡</span>
+              <span>최단시간</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🔥</span>
+              <span>유명지</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">👥</span>
+              <span>혼잡 무시</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">❌</span>
+              <span>획일적</span>
+            </div>
+          </div>
+          <ScribbleX className="absolute top-2 right-2 w-12 h-12 text-[#E63946]" />
+        </div>
+
+        {/* Right - JejU-Again */}
+        <BrutalistBox className="bg-green-50 p-6" borderColor="border-[#06FFA5]" shadowColor="shadow-[#06FFA5]/40">
+          <h3 className="text-2xl font-black text-[#1A1A1A] mb-4 border-b-3 border-[#06FFA5] pb-2">
+            JEJU-AGAIN
+          </h3>
+          <div className="space-y-3 text-xl text-[#1A1A1A]">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">💚</span>
+              <span className="font-bold">편안한 길</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🏘️</span>
+              <span className="font-bold">읍면지역</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🚫</span>
+              <span className="font-bold">혼잡회피</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🎯</span>
+              <span className="font-bold">맞춤 POI</span>
+            </div>
+          </div>
+          <CheckmarkScribble className="absolute top-2 right-2 w-12 h-12 text-[#06FFA5]" />
+        </BrutalistBox>
+      </div>
+
+      {/* Screenshot placeholder - would show map with route */}
+      <div className="text-center text-xl font-bold text-gray-500">
+        (Map visualization integrated in actual app)
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 10: Real-time Alerts - Notification UI
+  <Slide key="10" backgroundColor="bg-[#F7F052]">
+    <div className="h-full flex flex-col justify-center items-center space-y-8">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-[#1A1A1A] text-center mb-4">
+        <span className="text-4xl">🔔</span> [기능 3] 실시간 안심 알림
+      </h2>
+
+      {/* Mock notification */}
+      <div className="relative">
+        <BrutalistBox className="bg-white p-8 w-[500px]" borderColor="border-[#1A1A1A]">
+          <div className="bg-[#E63946] text-white px-4 py-2 font-bold text-xl mb-6 border-b-4 border-[#1A1A1A]">
+            ⚠️ CONGESTION ALERT
+          </div>
+
+          {/* Current location - crowded */}
+          <div className="mb-6">
+            <div className="text-2xl font-bold text-[#1A1A1A] mb-3">"성산일출봉"</div>
+            <div className="text-lg text-gray-600 mb-2">현재 혼잡도:</div>
+            <div className="flex items-center gap-4">
+              <div className="bg-[#E63946] text-white px-6 py-3 text-3xl font-black border-4 border-[#1A1A1A]" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+                80%
+              </div>
+              <div className="text-4xl">😡</div>
+              <div className="text-2xl font-bold text-[#E63946]">CROWDED</div>
+            </div>
+          </div>
+
+          {/* Alternative - quiet */}
+          <div className="mb-6 bg-green-50 p-4 rounded-lg border-3 border-[#06FFA5]">
+            <div className="text-2xl font-bold text-[#1A1A1A] mb-3">"섭지코지 숲길"</div>
+            <div className="text-lg text-gray-600 mb-2">대안 장소 (10분):</div>
+            <div className="flex items-center gap-4">
+              <div className="bg-[#06FFA5] text-[#1A1A1A] px-6 py-3 text-2xl font-black border-4 border-[#1A1A1A]">
+                QUIET
+              </div>
+              <div className="text-4xl">😊</div>
+              <div className="text-2xl font-bold text-[#06FFA5]">한적함</div>
+            </div>
+          </div>
+
+          {/* Action button */}
+          <button className="w-full bg-[#00B4D8] text-white py-4 text-xl font-black border-4 border-[#1A1A1A] shadow-[4px_4px_0px] shadow-black/40 hover:shadow-[2px_2px_0px] transition-all">
+            경로 변경하기
+          </button>
+        </BrutalistBox>
+
+        {/* Hand pointer */}
+        <div className="absolute -right-16 bottom-12 text-6xl animate-bounce">
+          👈
+        </div>
+      </div>
+
+      {/* Bottom highlight */}
+      <div className="bg-[#1A1A1A] text-white px-12 py-4 text-3xl font-black border-4 border-[#1A1A1A]">
+        능동적 개입 시스템 = 차별점
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 11: AI Engine - Tech Focus
+  <Slide key="11" backgroundColor="bg-[#1A1A1A]">
+    <div className="h-full flex flex-col justify-center items-center space-y-8">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-white text-center mb-6">
+        <span className="text-4xl">🤖</span> AI 맞춤형 코스 생성 엔진
+      </h2>
+
+      {/* Chip design */}
+      <div className="relative">
+        <BrutalistBox className="bg-[#00B4D8] p-12 text-center" borderColor="border-[#06FFA5]">
+          <div className="text-6xl font-black text-white mb-4" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+            CLAUDE SONNET
+          </div>
+          <div className="text-4xl font-bold text-white mb-6">4.0</div>
+          <div className="flex justify-center gap-4 text-white text-3xl">
+            <div>╱╲</div>
+            <div>╱╲</div>
+            <div>╱╲</div>
+          </div>
+          <div className="flex justify-center gap-4 mt-2 text-white text-2xl">
+            <div>││</div>
+            <div>││</div>
+            <div>││</div>
+          </div>
+        </BrutalistBox>
+
+        {/* Output boxes */}
+        <div className="flex justify-center gap-6 mt-8">
+          <BrutalistBox className="bg-[#FF6B35] p-6 text-center" borderColor="border-[#FF6B35]">
+            <div className="text-white font-black text-2xl mb-2">DATA</div>
+            <div className="text-white text-lg">분석</div>
+          </BrutalistBox>
+          <BrutalistBox className="bg-[#06FFA5] p-6 text-center" borderColor="border-[#06FFA5]">
+            <div className="text-[#1A1A1A] font-black text-2xl mb-2">MATCH</div>
+            <div className="text-[#1A1A1A] text-lg">최적화</div>
+          </BrutalistBox>
+          <BrutalistBox className="bg-[#F7F052] p-6 text-center" borderColor="border-[#F7F052]">
+            <div className="text-[#1A1A1A] font-black text-2xl mb-2">REASON</div>
+            <div className="text-[#1A1A1A] text-lg">설명</div>
+          </BrutalistBox>
+        </div>
+      </div>
+
+      {/* Code prompt */}
+      <div className="bg-[#2A2A2A] border-4 border-[#06FFA5] p-6 max-w-2xl w-full" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+        <div className="text-[#06FFA5] space-y-2">
+          <div className="text-lg">$ generate_itinerary.sh</div>
+          <div className="text-lg">--profile=ACTIVE_SENIOR</div>
+          <div className="text-lg">--avoid=CROWDED</div>
+          <div className="text-lg">--include=local_shops</div>
+          <div className="text-lg">--output=JSON</div>
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 12: Data Sources - Filing Cabinet with Screenshot
+  <Slide key="12" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-6">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-[#1A1A1A] text-center mb-4">
+        <span className="text-4xl">📊</span> 실제 데이터 활용
+      </h2>
+
+      <div className="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {/* Left - Data sources */}
+        <div className="space-y-4">
+          <BrutalistBox className="bg-white p-6" borderColor="border-[#00B4D8]">
+            <div className="flex items-center gap-3 mb-4 border-b-3 border-[#00B4D8] pb-3">
+              <span className="text-3xl">✈️</span>
+              <h3 className="text-2xl font-black text-[#1A1A1A]">입도·이동 통계</h3>
+            </div>
+            <div className="space-y-2 text-lg text-[#1A1A1A]">
+              <div>• 내국인 (2019-2025)</div>
+              <div>• 외국인 (2019-2025)</div>
+              <div>• 지역별 현황</div>
+            </div>
+          </BrutalistBox>
+
+          <BrutalistBox className="bg-white p-6" borderColor="border-[#FF6B35]">
+            <div className="flex items-center gap-3 mb-4 border-b-3 border-[#FF6B35] pb-3">
+              <span className="text-3xl">💳</span>
+              <h3 className="text-2xl font-black text-[#1A1A1A]">생산·소비 통계</h3>
+            </div>
+            <div className="space-y-2 text-lg text-[#1A1A1A]">
+              <div>• 월간 소비 (2013-2025)</div>
+              <div>• 업종별 분석</div>
+              <div>• 지역별 매출</div>
+            </div>
+          </BrutalistBox>
+        </div>
+
+        {/* Right - Screenshot */}
+        <div className="relative transform rotate-2">
+          <BrutalistBox className="bg-white p-2" borderColor="border-[#1A1A1A]">
+            <Image
+              src="/screenshots/jeju-again-statistics.png"
+              alt="Statistics Dashboard"
+              width={600}
+              height={400}
+              className="w-full h-auto"
+            />
+          </BrutalistBox>
+          <div className="absolute -bottom-4 -left-4 bg-[#E63946] text-white px-4 py-2 border-3 border-[#1A1A1A] font-bold text-sm -rotate-6">
+            ← 실제 통계
+          </div>
+        </div>
+      </div>
+
+      {/* Data source stamp */}
+      <div className="text-center">
+        <StampBox className="inline-block px-8 py-4" color="border-[#E63946]">
+          <div className="text-xl font-bold text-[#E63946]">📌 data.ijto.or.kr</div>
+          <div className="text-lg text-[#1A1A1A]">공식 데이터 출처</div>
+        </StampBox>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 13: Impact - Medal Podium
+  <Slide key="13" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-8">
+      {/* Title */}
+      <h2 className="text-6xl font-black text-[#1A1A1A] text-center mb-6">
+        <span className="text-5xl">🎉</span> 기대효과
+      </h2>
+
+      {/* Three podiums */}
+      <div className="flex items-end justify-center gap-8 max-w-4xl mx-auto">
+        {/* Silver - 2nd place */}
+        <div className="w-64">
+          <BrutalistBox className="bg-white p-6 text-center" borderColor="border-gray-400" shadowColor="shadow-gray-400/40">
+            <div className="text-5xl mb-4">🥈</div>
+            <div className="text-2xl font-black text-[#1A1A1A] mb-2">對 지역경제</div>
+            <div className="border-t-4 border-gray-400 my-4" />
+            <div className="text-4xl font-black text-[#1A1A1A] mb-2">소상공인</div>
+            <div className="text-2xl font-bold text-gray-600">상생</div>
+          </BrutalistBox>
+        </div>
+
+        {/* Gold - 1st place */}
+        <div className="w-64">
+          <BrutalistBox className="bg-white p-8 text-center" borderColor="border-[#F7F052]" shadowColor="shadow-[#F7F052]/60">
+            <div className="text-6xl mb-4">🥇</div>
+            <div className="text-3xl font-black text-[#1A1A1A] mb-2">對 관광객</div>
+            <div className="border-t-4 border-[#F7F052] my-4" />
+            <div className="text-5xl font-black text-[#1A1A1A] mb-2">128만 명</div>
+            <div className="text-2xl font-bold text-gray-600">만족</div>
+            <StarBurst className="absolute -top-8 -left-8 w-24 h-24 text-[#F7F052]" />
+            <StarBurst className="absolute -top-8 -right-8 w-20 h-20 text-[#FF6B35]" />
+          </BrutalistBox>
+        </div>
+
+        {/* Bronze - 3rd place */}
+        <div className="w-64">
+          <BrutalistBox className="bg-white p-6 text-center" borderColor="border-[#FF6B35]" shadowColor="shadow-[#FF6B35]/40">
+            <div className="text-5xl mb-4">🥉</div>
+            <div className="text-2xl font-black text-[#1A1A1A] mb-2">對 제주정책</div>
+            <div className="border-t-4 border-[#FF6B35] my-4" />
+            <div className="text-4xl font-black text-[#1A1A1A] mb-2">3대 난제</div>
+            <div className="text-2xl font-bold text-gray-600">해결</div>
+          </BrutalistBox>
+        </div>
+      </div>
+
+      {/* Bottom highlight */}
+      <div className="text-center">
+        <BrutalistBox className="inline-block bg-[#06FFA5] px-12 py-6" borderColor="border-[#1A1A1A]">
+          <div className="text-4xl font-black text-[#1A1A1A]">단일 솔루션으로</div>
+          <div className="text-3xl font-bold text-[#1A1A1A] mt-2">→ 거대 임팩트 창출</div>
+        </BrutalistBox>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 14: Tech Stack - Sticker Bomb
+  <Slide key="14" backgroundColor="bg-[#1A1A1A]">
+    <div className="h-full flex flex-col justify-center items-center space-y-8">
+      {/* Title */}
+      <h2 className="text-5xl font-black text-white text-center mb-6">
+        <span className="text-4xl">⚡</span> 기술 스택
+      </h2>
+
+      {/* Scattered tech stickers */}
+      <div className="relative w-full max-w-4xl h-96">
+        {/* Next.js */}
+        <div className="absolute top-12 left-24 transform -rotate-6">
+          <div className="bg-white border-4 border-[#1A1A1A] px-8 py-6 shadow-[6px_6px_0px] shadow-white/20">
+            <div className="text-4xl mb-2">▲</div>
+            <div className="text-2xl font-black text-[#1A1A1A]">Next.js</div>
+            <div className="text-xl font-bold text-gray-600">16</div>
+          </div>
+        </div>
+
+        {/* Claude */}
+        <div className="absolute top-8 right-32 transform rotate-3">
+          <BrutalistBox className="bg-[#FF6B35] px-8 py-6" borderColor="border-[#FF6B35]">
+            <div className="text-2xl font-black text-white">Claude</div>
+            <div className="text-xl font-bold text-white">Sonnet 4.0</div>
+          </BrutalistBox>
+        </div>
+
+        {/* TypeScript */}
+        <div className="absolute top-40 left-48 transform rotate-12">
+          <BrutalistBox className="bg-[#00B4D8] px-8 py-6" borderColor="border-[#00B4D8]">
+            <div className="text-2xl font-black text-white">TypeScript</div>
+          </BrutalistBox>
+        </div>
+
+        {/* Tailwind */}
+        <div className="absolute top-48 left-12 transform -rotate-12">
+          <BrutalistBox className="bg-[#06FFA5] px-8 py-6" borderColor="border-[#06FFA5]">
+            <div className="text-2xl font-black text-[#1A1A1A]">Tailwind</div>
+            <div className="text-xl font-bold text-[#1A1A1A]">CSS v4</div>
+          </BrutalistBox>
+        </div>
+
+        {/* Naver Maps */}
+        <div className="absolute bottom-32 right-24 transform rotate-6">
+          <BrutalistBox className="bg-white px-8 py-6" borderColor="border-green-600">
+            <div className="text-2xl font-black text-[#1A1A1A]">Naver</div>
+            <div className="text-xl font-bold text-gray-600">Maps</div>
+          </BrutalistBox>
+        </div>
+
+        {/* Vercel */}
+        <div className="absolute bottom-24 left-32 transform -rotate-3">
+          <div className="bg-[#1A1A1A] border-4 border-white px-8 py-6 shadow-[6px_6px_0px] shadow-white/20">
+            <div className="text-2xl font-black text-white">Vercel</div>
+            <div className="text-xl font-bold text-gray-400">Deploy</div>
+          </div>
+        </div>
+
+        {/* Framer Motion */}
+        <div className="absolute top-56 right-48 transform rotate-9">
+          <div className="bg-white border-4 border-[#1A1A1A] px-6 py-4 shadow-[4px_4px_0px] shadow-white/20">
+            <div className="text-xl font-black text-[#1A1A1A]">Framer</div>
+            <div className="text-lg font-bold text-gray-600">Motion</div>
+          </div>
+        </div>
+
+        {/* Google Sheets */}
+        <div className="absolute bottom-12 right-56 transform -rotate-6">
+          <BrutalistBox className="bg-white px-6 py-4" borderColor="border-[#1A1A1A]">
+            <div className="text-xl font-black text-[#1A1A1A]">Google</div>
+            <div className="text-lg font-bold text-gray-600">Sheets</div>
+          </BrutalistBox>
+        </div>
+      </div>
+
+      {/* Bottom badge */}
+      <div className="bg-[#F7F052] text-[#1A1A1A] px-12 py-4 text-2xl font-black border-4 border-[#F7F052]">
+        ━━━━━━━━━━━━━━━━━━━━━━
+        <div>PRODUCTION READY 2025</div>
+        ━━━━━━━━━━━━━━━━━━━━━━
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 15: Proposal - Urgent Stamp Style
+  <Slide key="15" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center space-y-8">
+      {/* Title */}
+      <h2 className="text-6xl font-black text-[#1A1A1A] text-center mb-6">
+        <span className="text-5xl">💡</span> 활용 제안
+      </h2>
+
+      {/* Critical request */}
+      <div className="relative max-w-3xl mx-auto">
+        <BrutalistBox className="bg-red-50 p-8" borderColor="border-[#E63946]" shadowColor="shadow-[#E63946]/60">
+          <div className="bg-[#E63946] text-white px-6 py-3 text-2xl font-black text-center mb-6 border-b-4 border-[#1A1A1A]">
+            🔴 CRITICAL REQUEST
+          </div>
+
+          <h3 className="text-3xl font-black text-[#1A1A1A] mb-6 text-center">
+            실시간 데이터 API 공개
+          </h3>
+
+          <div className="bg-white border-4 border-[#1A1A1A] p-6 mb-6">
+            <div className="space-y-3 text-xl text-[#1A1A1A]">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">📊</span>
+                <span>관광객 분포</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🚗</span>
+                <span>차량 분포</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">⏱️</span>
+                <span>5분 단위</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 text-xl">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">❌</span>
+              <span className="font-bold text-[#E63946]">현재: 불가능</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">✅</span>
+              <span className="font-bold text-[#06FFA5]">요청: API 공개</span>
+            </div>
+          </div>
+        </BrutalistBox>
+
+        {/* Urgent overlay */}
+        <div className="absolute -top-6 -right-6 bg-[#F7F052] text-[#1A1A1A] px-6 py-3 border-4 border-[#1A1A1A] font-black text-xl rotate-12 shadow-[4px_4px_0px] shadow-black/40">
+          URGENT
+        </div>
+      </div>
+
+      {/* Optional request */}
+      <div className="max-w-2xl mx-auto">
+        <div className="border-4 border-[#00B4D8] bg-blue-50 p-6">
+          <div className="bg-[#00B4D8] text-white px-6 py-2 text-xl font-black text-center mb-4">
+            🔵 OPTIONAL REQUEST
+          </div>
+          <h3 className="text-2xl font-black text-[#1A1A1A] text-center">
+            무장애 데이터 통합
+          </h3>
+          <div className="text-center text-4xl mt-4">
+            ♿🚼🅿️
+          </div>
+        </div>
+      </div>
+    </div>
+  </Slide>,
+
+  // Slide 16: CTA/Contact - Torn Poster with URL Cards (NO QR CODES)
+  <Slide key="16" backgroundColor="bg-[#FFFEF2]">
+    <div className="h-full flex flex-col justify-center items-center space-y-8 relative">
+      {/* Top - brand */}
+      <div className="text-center">
+        <div className="text-7xl mb-4">🏝️</div>
+        <h1 className="text-7xl font-black text-[#1A1A1A] mb-3">
+          JEJU-AGAIN
+        </h1>
+        <p className="text-4xl font-bold text-[#1A1A1A]">제주어게인</p>
+      </div>
+
+      {/* Tagline with marker */}
+      <div className="text-center relative">
+        <p className="text-3xl font-light text-[#1A1A1A]">
+          "가장 빠른 길이 아닌,
+        </p>
+        <MarkerHighlight className="text-3xl font-bold text-[#1A1A1A] inline-block mt-2" style={{ color: '#F7F052' }}>
+          가장 편안한 길"
+        </MarkerHighlight>
+        <WobblyUnderline className="mt-2 text-[#FF6B35] w-96 mx-auto" />
+      </div>
+
+      {/* Contact info */}
+      <BrutalistBox className="bg-white p-8 text-center" borderColor="border-[#1A1A1A]">
+        <div className="text-2xl font-bold text-[#1A1A1A] mb-2">
+          📧 sanoramyun8@gmail.com
+        </div>
+        <div className="border-t-3 border-[#1A1A1A] my-4" />
+        <div className="text-2xl font-bold text-[#1A1A1A]">
+          📱 010-7939-3123
+        </div>
+      </BrutalistBox>
+
+      {/* URL cards - NO QR CODES! */}
+      <div className="grid grid-cols-2 gap-8 max-w-4xl">
+        {/* Live Demo Card */}
+        <div className="relative transform -rotate-1">
+          <BrutalistBox className="bg-white p-6" borderColor="border-[#FF6B35]" shadowColor="shadow-[#FF6B35]/40">
+            <div className="text-3xl font-black text-[#1A1A1A] mb-4 flex items-center gap-3">
+              <span>🚀</span>
+              <span>LIVE DEMO</span>
+            </div>
+            <div className="relative mb-4">
+              <Image
+                src="/screenshots/jeju-again-homepage-hero.png"
+                alt="Live Demo"
+                width={300}
+                height={200}
+                className="w-full h-auto border-3 border-[#1A1A1A]"
+              />
+            </div>
+            <div className="bg-[#1A1A1A] text-[#06FFA5] px-4 py-3 text-center border-3 border-[#1A1A1A]" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              <div className="text-lg font-bold">jeju-again</div>
+              <div className="text-lg font-bold">.vercel.app</div>
+            </div>
+            <ChunkyArrow className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 text-[#FF6B35]" direction="down" />
+          </BrutalistBox>
+        </div>
+
+        {/* Source Code Card */}
+        <div className="relative transform rotate-1">
+          <BrutalistBox className="bg-white p-6" borderColor="border-[#00B4D8]" shadowColor="shadow-[#00B4D8]/40">
+            <div className="text-3xl font-black text-[#1A1A1A] mb-4 flex items-center gap-3">
+              <span>📦</span>
+              <span>SOURCE CODE</span>
+            </div>
+            <div className="relative mb-4">
+              <div className="w-full h-48 bg-gray-100 border-3 border-[#1A1A1A] flex items-center justify-center">
+                <div className="text-6xl">📁</div>
+              </div>
+            </div>
+            <div className="bg-[#1A1A1A] text-[#06FFA5] px-4 py-3 text-center border-3 border-[#1A1A1A]" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              <div className="text-lg font-bold">github.com/</div>
+              <div className="text-lg font-bold">yonghwan1106/</div>
+              <div className="text-lg font-bold">jeju-again</div>
+            </div>
+            <ChunkyArrow className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 text-[#00B4D8]" direction="down" />
+          </BrutalistBox>
+        </div>
+      </div>
+
+      {/* Contest badge at bottom */}
+      <div className="bg-[#FF6B35] text-white px-12 py-4 text-xl font-black border-4 border-[#1A1A1A] shadow-[6px_6px_0px] shadow-black/40">
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        <div>2025 제주관광 데이터 활용 공모전</div>
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       </div>
     </div>
   </Slide>,
