@@ -104,7 +104,7 @@ export default function MyItinerariesPage() {
               <div>
                 <h1 className="text-4xl font-bold mb-2">저장된 일정</h1>
                 <p className="text-blue-100">
-                  Google Sheets에 저장된 여행 코스를 확인하세요
+                  내가 만든 제주 여행 코스를 다시 찾아보세요
                 </p>
               </div>
             </div>
