@@ -15,6 +15,11 @@ export default function Navigation() {
     { href: '/my-itineraries', label: '저장된 일정' },
   ];
 
+  // Don't render navigation on presentation page
+  if (pathname === '/presentation') {
+    return null;
+  }
+
   return (
     <header className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">

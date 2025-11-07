@@ -9,21 +9,6 @@ export default function PresentationPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = slides.length;
 
-  // Hide navigation and footer on mount
-  useEffect(() => {
-    // Hide header navigation
-    const nav = document.querySelector('nav');
-    const footer = document.querySelector('footer');
-    if (nav) nav.style.display = 'none';
-    if (footer) footer.style.display = 'none';
-
-    // Restore on unmount
-    return () => {
-      if (nav) nav.style.display = '';
-      if (footer) footer.style.display = '';
-    };
-  }, []);
-
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
