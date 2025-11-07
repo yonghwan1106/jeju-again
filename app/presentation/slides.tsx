@@ -89,51 +89,51 @@ export const slides = [
 
   // Slide 3: 86% 충격 - 거대 시장 발견
   <Slide key="3" backgroundColor="bg-gradient-to-br from-orange-500 via-red-500 to-pink-600">
-    <div className="space-y-10">
-      <h2 className="text-6xl font-black text-white mb-8 text-center">
+    <div className="space-y-6">
+      <h2 className="text-5xl font-black text-white mb-4 text-center">
         <span className="text-yellow-300">👥</span> 정책의 사각지대를 발견하다
       </h2>
 
       {/* 거대한 86% 숫자 */}
-      <div className="bg-white/20 backdrop-blur-xl p-12 rounded-3xl text-center mb-8">
-        <div className="text-[12rem] font-black text-white leading-none mb-4">
+      <div className="bg-white/20 backdrop-blur-xl p-8 rounded-3xl text-center mb-4">
+        <div className="text-[8rem] font-black text-white leading-none mb-2">
           86%
         </div>
-        <div className="text-4xl font-bold text-yellow-200 mb-6">
+        <div className="text-3xl font-bold text-yellow-200 mb-3">
           연간 148만 명의 '진짜' 관광약자
         </div>
-        <div className="text-2xl text-white/90">
+        <div className="text-xl text-white/90">
           하지만 <span className="text-red-200 font-bold">정책 지원은 0%</span>
         </div>
       </div>
 
       {/* 구성 비율 */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-blue-600 p-8 rounded-2xl shadow-xl">
-          <div className="text-8xl text-center mb-4">👴👵</div>
-          <div className="text-6xl font-black text-white text-center mb-2">51%</div>
-          <div className="text-2xl font-bold text-blue-100 text-center mb-3">65세 이상 시니어</div>
-          <div className="text-xl text-white text-center">연 75만 명</div>
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="bg-blue-600 p-6 rounded-2xl shadow-xl">
+          <div className="text-6xl text-center mb-2">👴👵</div>
+          <div className="text-5xl font-black text-white text-center mb-1">51%</div>
+          <div className="text-xl font-bold text-blue-100 text-center mb-2">65세 이상 시니어</div>
+          <div className="text-lg text-white text-center">연 75만 명</div>
         </div>
 
-        <div className="bg-pink-600 p-8 rounded-2xl shadow-xl">
-          <div className="text-8xl text-center mb-4">👶👨‍👩‍👧</div>
-          <div className="text-6xl font-black text-white text-center mb-2">35%</div>
-          <div className="text-2xl font-bold text-pink-100 text-center mb-3">4세 이하 영유아 동반</div>
-          <div className="text-xl text-white text-center">연 52만 명</div>
+        <div className="bg-pink-600 p-6 rounded-2xl shadow-xl">
+          <div className="text-6xl text-center mb-2">👶👨‍👩‍👧</div>
+          <div className="text-5xl font-black text-white text-center mb-1">35%</div>
+          <div className="text-xl font-bold text-pink-100 text-center mb-2">4세 이하 영유아 동반</div>
+          <div className="text-lg text-white text-center">연 52만 명</div>
         </div>
       </div>
 
       {/* 기존 정책 비교 */}
-      <div className="bg-black/40 backdrop-blur-md p-8 rounded-2xl">
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="bg-black/40 backdrop-blur-md p-6 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="text-center">
-            <div className="text-5xl font-bold text-red-400 mb-2">13.5%</div>
-            <div className="text-xl text-white">기존 정책 대상<br/>(휠체어 등 무장애)</div>
+            <div className="text-4xl font-bold text-red-400 mb-1">13.5%</div>
+            <div className="text-lg text-white">기존 정책 대상<br/>(휠체어 등 무장애)</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-green-400 mb-2">6.5배</div>
-            <div className="text-xl text-white">더 큰 시장<br/>(시니어 + 영유아)</div>
+            <div className="text-4xl font-bold text-green-400 mb-1">6.5배</div>
+            <div className="text-lg text-white">더 큰 시장<br/>(시니어 + 영유아)</div>
           </div>
         </div>
       </div>
@@ -216,36 +216,36 @@ export const slides = [
 
   // Slide 5: 유레카! - Nexus 발견
   <Slide key="5" backgroundColor="bg-gradient-to-br from-green-400 via-blue-500 to-purple-600">
-    <div className="space-y-10 text-white">
-      <div className="text-center mb-10">
-        <div className="text-8xl mb-6">💡</div>
-        <h2 className="text-7xl font-black mb-4">
+    <div className="space-y-6 text-white">
+      <div className="text-center mb-4">
+        <div className="text-6xl mb-3">💡</div>
+        <h2 className="text-5xl font-black mb-2">
           EUREKA!
         </h2>
-        <p className="text-3xl font-semibold">두 문제의 교차점을 발견하다</p>
+        <p className="text-2xl font-semibold">두 문제의 교차점을 발견하다</p>
       </div>
 
       {/* 데이터 인사이트 */}
-      <div className="bg-white/20 backdrop-blur-xl p-10 rounded-3xl mb-8">
-        <h3 className="text-4xl font-bold mb-8 text-center text-yellow-300">
+      <div className="bg-white/20 backdrop-blur-xl p-6 rounded-3xl mb-4">
+        <h3 className="text-3xl font-bold mb-4 text-center text-yellow-300">
           🔍 데이터 분석 결과
         </h3>
-        <div className="bg-white text-gray-800 p-8 rounded-2xl text-2xl leading-relaxed text-center">
-          <p className="mb-6">
-            <span className="text-orange-600 font-black text-4xl">86%</span> 관광약자는<br/>
+        <div className="bg-white text-gray-800 p-6 rounded-2xl text-xl leading-relaxed text-center">
+          <p className="mb-4">
+            <span className="text-orange-600 font-black text-3xl">86%</span> 관광약자는<br/>
             일반 관광객과 <strong className="text-blue-700">전혀 다른</strong> 선호도를 보인다
           </p>
-          <div className="grid md:grid-cols-3 gap-4 mt-8">
-            <div className="bg-green-100 p-6 rounded-xl">
-              <div className="text-5xl mb-3">🌲</div>
+          <div className="grid md:grid-cols-3 gap-3 mt-4">
+            <div className="bg-green-100 p-4 rounded-xl">
+              <div className="text-4xl mb-2">🌲</div>
               <p className="font-bold text-green-700">숲, 오름</p>
             </div>
-            <div className="bg-blue-100 p-6 rounded-xl">
-              <div className="text-5xl mb-3">🏘️</div>
+            <div className="bg-blue-100 p-4 rounded-xl">
+              <div className="text-4xl mb-2">🏘️</div>
               <p className="font-bold text-blue-700">읍면 지역</p>
             </div>
-            <div className="bg-purple-100 p-6 rounded-xl">
-              <div className="text-5xl mb-3">🎨</div>
+            <div className="bg-purple-100 p-4 rounded-xl">
+              <div className="text-4xl mb-2">🎨</div>
               <p className="font-bold text-purple-700">체험 콘텐츠</p>
             </div>
           </div>
@@ -253,27 +253,27 @@ export const slides = [
       </div>
 
       {/* 완벽한 매칭 */}
-      <div className="bg-black/30 backdrop-blur-md p-8 rounded-2xl">
-        <div className="flex items-center justify-center gap-6 text-3xl font-bold">
-          <div className="bg-orange-500 px-8 py-6 rounded-xl text-center">
-            <div className="text-5xl mb-2">👥</div>
+      <div className="bg-black/30 backdrop-blur-md p-6 rounded-2xl">
+        <div className="flex items-center justify-center gap-4 text-2xl font-bold">
+          <div className="bg-orange-500 px-6 py-4 rounded-xl text-center">
+            <div className="text-4xl mb-1">👥</div>
             <div>86% 관광약자<br/>선호 콘텐츠</div>
           </div>
-          <div className="text-6xl">⚡</div>
-          <div className="bg-blue-600 px-8 py-6 rounded-xl text-center">
-            <div className="text-5xl mb-2">🏘️</div>
+          <div className="text-4xl">⚡</div>
+          <div className="bg-blue-600 px-6 py-4 rounded-xl text-center">
+            <div className="text-4xl mb-1">🏘️</div>
             <div>언더투어리즘<br/>지역 자산</div>
           </div>
-          <div className="text-6xl">=</div>
-          <div className="bg-green-500 px-8 py-6 rounded-xl text-center">
-            <div className="text-5xl mb-2">✨</div>
+          <div className="text-4xl">=</div>
+          <div className="bg-green-500 px-6 py-4 rounded-xl text-center">
+            <div className="text-4xl mb-1">✨</div>
             <div>완벽한<br/>매칭!</div>
           </div>
         </div>
       </div>
 
-      <div className="bg-yellow-400 text-gray-900 p-8 rounded-2xl text-center">
-        <p className="text-4xl font-black">
+      <div className="bg-yellow-400 text-gray-900 p-6 rounded-2xl text-center">
+        <p className="text-3xl font-black">
           단 하나의 솔루션으로 두 거대 난제 동시 해결!
         </p>
       </div>
@@ -375,27 +375,27 @@ export const slides = [
 
   // Slide 7: 데이터 엔진 - 3단계 로직
   <Slide key="7" backgroundColor="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
-    <div className="space-y-8 text-white">
-      <h2 className="text-6xl font-black mb-10 text-center">
+    <div className="space-y-4 text-white">
+      <h2 className="text-4xl font-black mb-4 text-center">
         <span className="text-yellow-300">⚙️</span> 데이터 엔진 작동 원리
       </h2>
 
-      <div className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl mb-8">
-        <h3 className="text-4xl font-bold text-center mb-8 text-yellow-300">
+      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl mb-4">
+        <h3 className="text-3xl font-bold text-center mb-4 text-yellow-300">
           3단계 과학적 알고리즘
         </h3>
 
         {/* 로직 1 */}
-        <div className="bg-indigo-700 p-8 rounded-2xl mb-6 shadow-2xl">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-4xl font-black text-indigo-900">
+        <div className="bg-indigo-700 p-4 rounded-2xl mb-3 shadow-2xl">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-black text-indigo-900">
               1
             </div>
-            <h4 className="text-3xl font-bold">우선 유도 지역 정의</h4>
+            <h4 className="text-2xl font-bold">우선 유도 지역 정의</h4>
           </div>
-          <div className="bg-white/20 p-6 rounded-xl mb-4">
-            <p className="text-xl mb-4">플랫폼 데이터 융합 → <strong className="text-yellow-300">'비인기/저소비' 읍면지역</strong> 과학적 정의</p>
-            <div className="bg-black/30 p-4 rounded-lg font-mono text-lg">
+          <div className="bg-white/20 p-4 rounded-xl mb-2">
+            <p className="text-base mb-2">플랫폼 데이터 융합 → <strong className="text-yellow-300">'비인기/저소비' 읍면지역</strong> 과학적 정의</p>
+            <div className="bg-black/30 p-3 rounded-lg font-mono text-sm">
               <p><strong className="text-green-400">지역별 관광객 현황</strong> (방문객 하위 20%)</p>
               <p className="text-yellow-300">+</p>
               <p><strong className="text-blue-400">지역별 매출액</strong> (매출 하위 20%)</p>
@@ -406,45 +406,45 @@ export const slides = [
         </div>
 
         {/* 로직 2 */}
-        <div className="bg-purple-700 p-8 rounded-2xl mb-6 shadow-2xl">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-4xl font-black text-purple-900">
+        <div className="bg-purple-700 p-4 rounded-2xl mb-3 shadow-2xl">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-black text-purple-900">
               2
             </div>
-            <h4 className="text-3xl font-bold">관광약자 프로필 생성</h4>
+            <h4 className="text-2xl font-bold">관광약자 프로필 생성</h4>
           </div>
-          <div className="bg-white/20 p-6 rounded-xl">
-            <p className="text-xl mb-4">약자 유형별 선호 콘텐츠(POI) <strong className="text-yellow-300">데이터로 정의</strong></p>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="bg-blue-500 p-4 rounded-lg">
-                <p className="font-bold mb-2">지역별 여행 키워드</p>
-                <p className="text-sm">'숲', '오름', '아이와', '체험'</p>
+          <div className="bg-white/20 p-4 rounded-xl">
+            <p className="text-base mb-3">약자 유형별 선호 콘텐츠(POI) <strong className="text-yellow-300">데이터로 정의</strong></p>
+            <div className="grid md:grid-cols-3 gap-2">
+              <div className="bg-blue-500 p-3 rounded-lg">
+                <p className="font-bold mb-1 text-sm">지역별 여행 키워드</p>
+                <p className="text-xs">'숲', '오름', '아이와', '체험'</p>
               </div>
-              <div className="bg-green-500 p-4 rounded-lg">
-                <p className="font-bold mb-2">한라산 탐방객</p>
-                <p className="text-sm">저강도 탐방로 선호</p>
+              <div className="bg-green-500 p-3 rounded-lg">
+                <p className="font-bold mb-1 text-sm">한라산 탐방객</p>
+                <p className="text-xs">저강도 탐방로 선호</p>
               </div>
-              <div className="bg-pink-500 p-4 rounded-lg">
-                <p className="font-bold mb-2">골프장 내장객</p>
-                <p className="text-sm">액티브 시니어 선호</p>
+              <div className="bg-pink-500 p-3 rounded-lg">
+                <p className="font-bold mb-1 text-sm">골프장 내장객</p>
+                <p className="text-xs">액티브 시니어 선호</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* 로직 3 */}
-        <div className="bg-pink-700 p-8 rounded-2xl shadow-2xl">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-4xl font-black text-pink-900">
+        <div className="bg-pink-700 p-4 rounded-2xl shadow-2xl">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-black text-pink-900">
               3
             </div>
-            <h4 className="text-3xl font-bold">안심 코스 자동 생성</h4>
+            <h4 className="text-2xl font-bold">안심 코스 자동 생성</h4>
           </div>
-          <div className="bg-white/20 p-6 rounded-xl">
-            <p className="text-xl mb-4"><strong className="text-yellow-300">[로직 1] 소외 지역</strong> + <strong className="text-green-300">[로직 2] 약자 선호 POI</strong> = <strong className="text-pink-300">최적 매칭</strong></p>
-            <div className="bg-black/30 p-4 rounded-lg">
-              <p className="mb-2">• <strong className="text-blue-400">차량분포도</strong> (이전/이후 방문지) 활용</p>
-              <p className="mb-2">• 관광객의 <strong className="text-green-400">자연스러운 이동 동선</strong> 기반</p>
+          <div className="bg-white/20 p-4 rounded-xl">
+            <p className="text-base mb-2"><strong className="text-yellow-300">[로직 1] 소외 지역</strong> + <strong className="text-green-300">[로직 2] 약자 선호 POI</strong> = <strong className="text-pink-300">최적 매칭</strong></p>
+            <div className="bg-black/30 p-3 rounded-lg text-sm">
+              <p className="mb-1">• <strong className="text-blue-400">차량분포도</strong> (이전/이후 방문지) 활용</p>
+              <p className="mb-1">• 관광객의 <strong className="text-green-400">자연스러운 이동 동선</strong> 기반</p>
               <p>• <strong className="text-yellow-400">최적 안심 코스</strong> 자동 생성</p>
             </div>
           </div>
@@ -455,20 +455,20 @@ export const slides = [
 
   // Slide 8: 핵심 기능 1 - 프로파일링
   <Slide key="8" backgroundColor="bg-gradient-to-br from-blue-50 to-purple-50">
-    <div className="space-y-8">
-      <h2 className="text-6xl font-black text-gray-800 mb-10 text-center">
+    <div className="space-y-4">
+      <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">
         <span className="text-blue-600">👥</span> [기능 1] 스마트 프로파일링
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div className="grid md:grid-cols-3 gap-4 mb-4">
         {/* 액티브 시니어 */}
-        <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-8 rounded-3xl shadow-2xl text-white transform hover:scale-105 transition-transform">
-          <div className="text-7xl mb-4 text-center">🚶</div>
-          <h3 className="text-3xl font-bold mb-3 text-center">액티브 시니어</h3>
-          <div className="bg-white/20 backdrop-blur p-4 rounded-xl mb-4">
-            <p className="text-xl font-semibold text-center">65-74세</p>
+        <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-2xl shadow-xl text-white">
+          <div className="text-5xl mb-2 text-center">🚶</div>
+          <h3 className="text-xl font-bold mb-2 text-center">액티브 시니어</h3>
+          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
+            <p className="text-sm font-semibold text-center">65-74세</p>
           </div>
-          <ul className="space-y-2 text-lg">
+          <ul className="space-y-1 text-sm">
             <li>✓ 걷기와 자연 선호</li>
             <li>✓ 한적한 오름, 숲길</li>
             <li>✓ 경치 좋은 카페</li>
@@ -476,13 +476,13 @@ export const slides = [
         </div>
 
         {/* 케어 시니어 */}
-        <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-8 rounded-3xl shadow-2xl text-white transform hover:scale-105 transition-transform">
-          <div className="text-7xl mb-4 text-center">☕</div>
-          <h3 className="text-3xl font-bold mb-3 text-center">케어 시니어</h3>
-          <div className="bg-white/20 backdrop-blur p-4 rounded-xl mb-4">
-            <p className="text-xl font-semibold text-center">75세 이상</p>
+        <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-4 rounded-2xl shadow-xl text-white">
+          <div className="text-5xl mb-2 text-center">☕</div>
+          <h3 className="text-xl font-bold mb-2 text-center">케어 시니어</h3>
+          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
+            <p className="text-sm font-semibold text-center">75세 이상</p>
           </div>
-          <ul className="space-y-2 text-lg">
+          <ul className="space-y-1 text-sm">
             <li>✓ 짧은 산책 코스</li>
             <li>✓ 편안한 카페</li>
             <li>✓ 휴게 시설 필수</li>
@@ -490,13 +490,13 @@ export const slides = [
         </div>
 
         {/* 유아 동반 */}
-        <div className="bg-gradient-to-br from-green-500 to-green-700 p-8 rounded-3xl shadow-2xl text-white transform hover:scale-105 transition-transform">
-          <div className="text-7xl mb-4 text-center">👨‍👩‍👧</div>
-          <h3 className="text-3xl font-bold mb-3 text-center">유아 동반 가족</h3>
-          <div className="bg-white/20 backdrop-blur p-4 rounded-xl mb-4">
-            <p className="text-xl font-semibold text-center">3-6세 아이</p>
+        <div className="bg-gradient-to-br from-green-500 to-green-700 p-4 rounded-2xl shadow-xl text-white">
+          <div className="text-5xl mb-2 text-center">👨‍👩‍👧</div>
+          <h3 className="text-xl font-bold mb-2 text-center">유아 동반 가족</h3>
+          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
+            <p className="text-sm font-semibold text-center">3-6세 아이</p>
           </div>
-          <ul className="space-y-2 text-lg">
+          <ul className="space-y-1 text-sm">
             <li>✓ 체험 프로그램</li>
             <li>✓ 놀이 시설</li>
             <li>✓ 아이 친화 공간</li>
@@ -504,15 +504,15 @@ export const slides = [
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-4">
         {/* 영아 동반 */}
-        <div className="bg-gradient-to-br from-pink-500 to-pink-700 p-8 rounded-3xl shadow-2xl text-white">
-          <div className="text-7xl mb-4 text-center">👶</div>
-          <h3 className="text-3xl font-bold mb-3 text-center">영아 동반 가족</h3>
-          <div className="bg-white/20 backdrop-blur p-4 rounded-xl mb-4">
-            <p className="text-xl font-semibold text-center">0-2세 아기</p>
+        <div className="bg-gradient-to-br from-pink-500 to-pink-700 p-4 rounded-2xl shadow-xl text-white">
+          <div className="text-5xl mb-2 text-center">👶</div>
+          <h3 className="text-xl font-bold mb-2 text-center">영아 동반 가족</h3>
+          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
+            <p className="text-sm font-semibold text-center">0-2세 아기</p>
           </div>
-          <ul className="space-y-2 text-lg">
+          <ul className="space-y-1 text-sm">
             <li>✓ 유모차 접근 가능</li>
             <li>✓ 수유실 필수</li>
             <li>✓ 기저귀 교환대</li>
@@ -520,13 +520,13 @@ export const slides = [
         </div>
 
         {/* 일반 관광객 */}
-        <div className="bg-gradient-to-br from-gray-500 to-gray-700 p-8 rounded-3xl shadow-2xl text-white">
-          <div className="text-7xl mb-4 text-center">✈️</div>
-          <h3 className="text-3xl font-bold mb-3 text-center">일반 관광객</h3>
-          <div className="bg-white/20 backdrop-blur p-4 rounded-xl mb-4">
-            <p className="text-xl font-semibold text-center">제약 없음</p>
+        <div className="bg-gradient-to-br from-gray-500 to-gray-700 p-4 rounded-2xl shadow-xl text-white">
+          <div className="text-5xl mb-2 text-center">✈️</div>
+          <h3 className="text-xl font-bold mb-2 text-center">일반 관광객</h3>
+          <div className="bg-white/20 backdrop-blur p-2 rounded-lg mb-2">
+            <p className="text-sm font-semibold text-center">제약 없음</p>
           </div>
-          <ul className="space-y-2 text-lg">
+          <ul className="space-y-1 text-sm">
             <li>✓ 다양한 여행 스타일</li>
             <li>✓ 유명 관광지 포함</li>
             <li>✓ 유연한 일정</li>
@@ -534,8 +534,8 @@ export const slides = [
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl text-center">
-        <p className="text-3xl font-black">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-2xl text-center">
+        <p className="text-2xl font-black">
           프로필 선택만으로 <span className="text-yellow-300">AI가 맞춤형 코스 자동 생성</span>
         </p>
       </div>
