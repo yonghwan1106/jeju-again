@@ -981,33 +981,33 @@ export const slides = [
     </div>
   </Slide>,
 
-  // Slide 16: Final Slide - Clean & Minimal
+  // Slide 16: Final Slide - Compact to fit viewport
   <Slide key="16" backgroundColor="bg-[#FFFEF2]">
-    <div className="h-full flex flex-col justify-center items-center space-y-12">
-      {/* Top - brand */}
+    <div className="h-full flex flex-col justify-center items-center space-y-6 py-8">
+      {/* Top - brand - Reduced size */}
       <div className="text-center">
-        <div className="text-7xl mb-4">🏝️</div>
-        <h1 className="text-7xl font-black text-[#1A1A1A] mb-3">
+        <div className="text-5xl mb-2">🏝️</div>
+        <h1 className="text-6xl font-black text-[#1A1A1A] mb-2">
           JEJU-AGAIN
         </h1>
-        <p className="text-4xl font-bold text-[#1A1A1A]">제주어게인</p>
+        <p className="text-3xl font-bold text-[#1A1A1A]">제주어게인</p>
       </div>
 
-      {/* Tagline with marker */}
+      {/* Tagline with marker - Reduced size */}
       <div className="text-center relative">
-        <p className="text-3xl font-light text-[#1A1A1A]">
+        <p className="text-2xl font-light text-[#1A1A1A]">
           "가장 빠른 길이 아닌,
         </p>
-        <MarkerHighlight className="text-3xl font-bold text-[#1A1A1A] inline-block mt-2" style={{ color: '#F7F052' }}>
+        <MarkerHighlight className="text-2xl font-bold text-[#1A1A1A] inline-block mt-1" style={{ color: '#F7F052' }}>
           가장 편안한 길"
         </MarkerHighlight>
-        <WobblyUnderline className="mt-2 text-[#FF6B35] w-96 mx-auto" />
+        <WobblyUnderline className="mt-1 text-[#FF6B35] w-72 mx-auto" />
       </div>
 
-      {/* Live Demo Card - Single centered */}
-      <div className="relative transform -rotate-1 max-w-xl">
-        <BrutalistBox className="bg-white p-8" borderColor="border-[#FF6B35]" shadowColor="shadow-[#FF6B35]/40">
-          <div className="text-4xl font-black text-[#1A1A1A] mb-6 flex items-center justify-center gap-3">
+      {/* Live Demo Card - Reduced padding and size */}
+      <div className="relative transform -rotate-1 max-w-lg">
+        <BrutalistBox className="bg-white p-5" borderColor="border-[#FF6B35]" shadowColor="shadow-[#FF6B35]/40">
+          <div className="text-3xl font-black text-[#1A1A1A] mb-4 flex items-center justify-center gap-2">
             <span>🚀</span>
             <span>LIVE DEMO</span>
           </div>
@@ -1015,17 +1015,17 @@ export const slides = [
             <Image
               src="/screenshots/jeju-again-homepage-hero.png"
               alt="Live Demo"
-              width={400}
-              height={250}
-              className="w-full h-auto border-4 border-[#1A1A1A]"
+              width={350}
+              height={220}
+              className="w-full h-auto border-3 border-[#1A1A1A]"
             />
           </div>
         </BrutalistBox>
-        <ChunkyArrow className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 text-[#FF6B35]" direction="down" />
+        <ChunkyArrow className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-12 text-[#FF6B35]" direction="down" />
       </div>
 
-      {/* Contest badge at bottom */}
-      <div className="bg-[#FF6B35] text-white px-12 py-4 text-xl font-black border-4 border-[#1A1A1A] shadow-[6px_6px_0px] shadow-black/40">
+      {/* Contest badge at bottom - Reduced padding */}
+      <div className="bg-[#FF6B35] text-white px-10 py-3 text-lg font-black border-4 border-[#1A1A1A] shadow-[6px_6px_0px] shadow-black/40">
         <div>2025 제주관광 데이터 활용 공모전</div>
       </div>
     </div>
